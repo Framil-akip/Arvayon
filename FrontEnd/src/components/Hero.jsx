@@ -66,8 +66,8 @@ const Hero = () => {
                 <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight animate-fade-in-up">
                     Design Beyond <span className="text-accent">Imagination</span>
                 </h1>
-                <p className="text-lg md:text-2xl text-gray-200 mb-0 font-light tracking-wide animate-fade-in-up delay-200">
-                    End-to-End Engineering & Design Solutions
+                <p className="text-lg md:text-3xl text-gray-100 mb-0 font-light tracking-wide animate-fade-in-up delay-200 italic">
+                    "Building Tomorrow's Dreams, Today"
                 </p>
             </div>
         </section>

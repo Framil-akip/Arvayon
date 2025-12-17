@@ -57,23 +57,40 @@ const WhyChooseUs = () => {
                     <div className="relative">
                         <div className="absolute inset-0 bg-accent/10 transform rotate-3 rounded-2xl"></div>
                         <div className="relative bg-primary p-8 rounded-2xl border border-white/5">
-                            <div className="grid grid-cols-2 gap-4">
-                                <div className="bg-secondary p-6 rounded-xl text-center">
-                                    <div className="text-4xl font-bold text-accent mb-2">50+</div>
-                                    <div className="text-sm text-gray-400 uppercase tracking-wider">Projects Completed</div>
+                            <div className="bg-secondary/90 p-8 rounded-2xl">
+                                <h3 className="text-2xl font-bold text-white mb-8 text-center border-b border-white/10 pb-4">Our Driving Force</h3>
+                                <div className="space-y-8">
+                                    <div>
+                                        <div className="flex justify-between mb-2 items-end">
+                                            <span className="text-gray-300 font-medium text-lg">Creative Innovation</span>
+                                            <span className="text-accent font-bold">100%</span>
+                                        </div>
+                                        <div className="w-full bg-gray-700 rounded-full h-3">
+                                            <div className="bg-accent h-3 rounded-full shadow-[0_0_10px_rgba(255,215,0,0.5)]" style={{ width: '100%' }}></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div className="flex justify-between mb-2 items-end">
+                                            <span className="text-gray-300 font-medium text-lg">Client Dedication</span>
+                                            <span className="text-accent font-bold">100%</span>
+                                        </div>
+                                        <div className="w-full bg-gray-700 rounded-full h-3">
+                                            <div className="bg-accent h-3 rounded-full shadow-[0_0_10px_rgba(255,215,0,0.5)]" style={{ width: '100%' }}></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div className="flex justify-between mb-2 items-end">
+                                            <span className="text-gray-300 font-medium text-lg">Transparency</span>
+                                            <span className="text-accent font-bold">100%</span>
+                                        </div>
+                                        <div className="w-full bg-gray-700 rounded-full h-3">
+                                            <div className="bg-accent h-3 rounded-full shadow-[0_0_10px_rgba(255,215,0,0.5)]" style={{ width: '100%' }}></div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div className="bg-secondary p-6 rounded-xl text-center">
-                                    <div className="text-4xl font-bold text-accent mb-2">100%</div>
-                                    <div className="text-sm text-gray-400 uppercase tracking-wider">Client Satisfaction</div>
-                                </div>
-                                <div className="bg-secondary p-6 rounded-xl text-center">
-                                    <div className="text-4xl font-bold text-accent mb-2">5+</div>
-                                    <div className="text-sm text-gray-400 uppercase tracking-wider">Years Experience</div>
-                                </div>
-                                <div className="bg-secondary p-6 rounded-xl text-center">
-                                    <div className="text-4xl font-bold text-accent mb-2">24/7</div>
-                                    <div className="text-sm text-gray-400 uppercase tracking-wider">Support</div>
-                                </div>
+                                <p className="text-gray-500 text-sm mt-8 text-center italic">
+                                    "Driven by passion, defined by quality."
+                                </p>
                             </div>
                         </div>
                     </div>
