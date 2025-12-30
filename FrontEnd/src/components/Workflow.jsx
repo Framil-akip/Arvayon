@@ -55,6 +55,16 @@ const steps = [
 ];
 
 const Workflow = () => {
+    const [activeStep, setActiveStep] = React.useState(0);
+
+    React.useEffect(() => {
+        const interval = setInterval(() => {
+            setActiveStep((prev) => (prev + 1) % steps.length);
+        }, 2000); // Change step every 2 seconds
+
+        return () => clearInterval(interval);
+    }, []);
+
     return (
         <section className="section-padding bg-primary border-t border-white/5">
             <div className="max-w-7xl mx-auto px-4">
@@ -69,56 +79,57 @@ const Workflow = () => {
                 </div>
 
                 <div className="relative">
-                    {/* Connecting Line (Desktop) */}
-                    <div className="hidden lg:block absolute top-1/2 left-0 w-full -translate-y-12 border-t-2 border-dashed border-amber-300/40"></div>
+                    {/* Connecting Line (Desktop) - Positioned at bottom of circles (top-24 = 96px, circle height is 96px) */}
+                    <div className="hidden lg:block absolute top-24 left-0 w-full border-t-2 border-dashed border-amber-300/30"></div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-12 lg:gap-8 overflow-visible">
-                        {steps.map((step, index) => (
-                            <a key={index} href={step.href} className="relative flex flex-col items-center group">
-                                {/* Icon Circle with Enhanced Glow */}
-                                <div className="relative mb-6">
-                                    {/* Outer Glow Ring */}
-                                    <div className="absolute inset-0 rounded-full bg-amber-200/30 group-hover:bg-amber-200/60 blur-2xl transition-all duration-500 scale-150"></div>
+                        {steps.map((step, index) => {
+                            const isActive = index === activeStep;
+                            return (
+                                <a key={index} href={step.href} className="relative flex flex-col items-center group">
+                                    {/* Icon Circle with Enhanced Glow */}
+                                    <div className="relative mb-6">
+                                        {/* Outer Glow Ring - Active State */}
+                                        <div className={`absolute inset-0 rounded-full blur-2xl transition-all duration-700 pointer-events-none
+                                            ${isActive ? 'bg-accent/60 scale-150' : 'bg-amber-200/10 scale-100 group-hover:bg-amber-200/30 group-hover:scale-125'}`}>
+                                        </div>
 
-                                    {/* Icon Container */}
-                                    <div className="relative w-24 h-24 rounded-full bg-amber-50/10 border-2 border-amber-300 group-hover:border-amber-300 flex items-center justify-center text-amber-300 z-10 transition-all duration-500 group-hover:bg-amber-100/20 group-hover:text-primary group-hover:scale-110 shadow-[0_0_20px_rgba(255,230,180,0.25)] group-hover:shadow-[0_0_35px_rgba(255,230,180,0.55)]">
-                                        {/* Inner Pulse Ring */}
-                                        <div className="absolute inset-3 rounded-full border border-amber-200 group-hover:border-primary/30 animate-pulse"></div>
+                                        {/* Icon Container */}
+                                        <div className={`relative w-24 h-24 rounded-full border-2 flex items-center justify-center z-10 transition-all duration-500
+                                            ${isActive
+                                                ? 'bg-accent/20 border-accent text-accent scale-110 shadow-[0_0_30px_rgba(255,215,0,0.4)]'
+                                                : 'bg-primary border-amber-300/50 text-amber-300 group-hover:border-accent group-hover:text-accent group-hover:bg-accent/10'
+                                            }`}>
 
-                                        {/* Icon */}
-                                        <div className="relative z-10 group-hover:scale-110 transition-transform duration-300">
-                                            {step.icon}
+                                            {/* Inner Pulse Ring */}
+                                            <div className={`absolute inset-3 rounded-full border transition-all duration-500
+                                                ${isActive ? 'border-accent/50 animate-ping' : 'border-transparent group-hover:border-accent/30'}`}>
+                                            </div>
+
+                                            {/* Icon */}
+                                            <div className={`relative z-10 transition-transform duration-300 ${isActive ? 'scale-110' : 'group-hover:scale-110'}`}>
+                                                {step.icon}
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
 
-                                {/* Content */}
-                                <div className="text-center">
-                                    <h3 className="text-lg font-bold text-white mb-2 group-hover:text-amber-300 transition-colors duration-300">
-                                        {step.title}
-                                    </h3>
-                                    <p className="text-gray-400 text-sm leading-relaxed max-w-[160px] mx-auto">
-                                        {step.desc}
-                                    </p>
-                                </div>
+                                    {/* Content */}
+                                    <div className="text-center">
+                                        <h3 className={`text-lg font-bold mb-2 transition-colors duration-300 ${isActive ? 'text-accent' : 'text-white group-hover:text-accent'}`}>
+                                            {step.title}
+                                        </h3>
+                                        <p className="text-gray-400 text-sm leading-relaxed max-w-[160px] mx-auto">
+                                            {step.desc}
+                                        </p>
+                                    </div>
 
-                                {/* Per-step desktop connector */}
-                                {index !== steps.length - 1 && (
-                                    <div className="hidden lg:block absolute top-12 right-[-20px] w-10 border-t-2 border-dashed border-amber-300/40"></div>
-                                )}
-
-                                {/* Mobile/Tablet Connecting Line */}
-                                {index !== steps.length - 1 && (
-                                    <div className="lg:hidden absolute bottom-[-40px] left-1/2 w-0.5 h-10 bg-amber-300/30 -translate-x-1/2"></div>
-                                )}
-                            </a>
-                        ))}
-                    </div>
-
-                    <div className="mt-20 text-center">
-                        <button className="px-10 py-4 bg-accent text-primary font-bold rounded-lg hover:bg-white transition-all duration-300 transform hover:scale-105 shadow-xl shadow-accent/10">
-                            TALK TO OUR DESIGN CONSULTANT
-                        </button>
+                                    {/* Mobile/Tablet Connecting Line */}
+                                    {index !== steps.length - 1 && (
+                                        <div className="lg:hidden absolute bottom-[-40px] left-1/2 w-0.5 h-10 bg-amber-300/30 -translate-x-1/2"></div>
+                                    )}
+                                </a>
+                            );
+                        })}
                     </div>
                 </div>
             </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import portfolio1 from '../assets/portfolio-1.png';
 import portfolio2 from '../assets/portfolio-2.png';
 import heroBg from '../assets/hero-bg.png';
@@ -32,6 +33,10 @@ const Portfolio = () => {
         },
     ];
 
+
+    const location = useLocation();
+    const isPortfolioPage = location.pathname === '/portfolio';
+
     return (
         <section id="portfolio" className="section-padding bg-primary">
             <div className="max-w-7xl mx-auto">
@@ -63,11 +68,13 @@ const Portfolio = () => {
                     ))}
                 </div>
 
-                <div className="text-center mt-12">
-                    <a href="#contact" className="btn-secondary inline-block">
-                        View All Projects
-                    </a>
-                </div>
+                {!isPortfolioPage && (
+                    <div className="text-center mt-12">
+                        <Link to="/portfolio" className="btn-secondary inline-block">
+                            View All Projects
+                        </Link>
+                    </div>
+                )}
             </div>
         </section>
     );

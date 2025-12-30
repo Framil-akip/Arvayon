@@ -21,15 +21,7 @@ const OfferAd = () => {
                     </a>
                 </div>
             </div>
-            <style jsx>{`
-                    .animate-marquee {
-                        animation: marquee 10s linear infinite;
-                    }
-                    @keyframes marquee {
-                        0% { transform: translateX(100%); }
-                        100% { transform: translateX(-100%); }
-                    }
-                `}</style>
+
         </div>
     );
 };

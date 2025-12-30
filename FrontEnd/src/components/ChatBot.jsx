@@ -44,7 +44,7 @@ const ChatBot = () => {
                 </div>
             </div>
 
-            
+
 
             {/* Pop-up Message Bubble */}
             {!isOpen && (

@@ -16,20 +16,20 @@ export const servicesData = [
         className: 'col-span-1 lg:col-span-2 row-span-1',
     },
     {
-        id: 'plan-approvals',
-        title: 'Plan Approvals',
-        image: projectPlanning,
-        description: 'End-to-end guidance for statutory plan approvals.',
-        details: ['Documentation', 'Submissions', 'Compliance checks'],
-        className: 'col-span-1 lg:col-span-1 row-span-1 lg:row-span-2',
-    },
-    {
         id: 'quantity-surveying',
         title: 'Quantity Surveying',
         image: portfolio2,
         description: 'Accurate BOQs, cost estimation and budgeting.',
         details: ['Material takeoffs', 'Rate analysis', 'Budget planning'],
         className: 'col-span-1 lg:col-span-2 row-span-1',
+    },
+    {
+        id: 'plan-approvals',
+        title: 'Plan Approvals',
+        image: projectPlanning,
+        description: 'End-to-end guidance for statutory plan approvals.',
+        details: ['Documentation', 'Submissions', 'Compliance checks'],
+        className: 'col-span-1 lg:col-span-1 row-span-1',
     },
     {
         id: 'structural-drawing',

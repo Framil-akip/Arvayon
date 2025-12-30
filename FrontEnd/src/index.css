@@ -12,7 +12,12 @@ body {
   @apply bg-primary text-white font-sans antialiased;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   @apply font-serif text-accent;
 }
 
@@ -26,4 +31,19 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-secondary {
   @apply border border-accent text-accent px-6 py-3 rounded font-bold hover:bg-accent hover:text-primary transition-colors duration-300 uppercase tracking-wide;
+}
+
+/* Marquee Animation */
+.animate-marquee {
+  animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
 }

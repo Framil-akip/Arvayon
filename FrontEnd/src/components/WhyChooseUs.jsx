@@ -58,7 +58,7 @@ const WhyChooseUs = () => {
                         <div className="absolute inset-0 bg-accent/10 transform rotate-3 rounded-2xl"></div>
                         <div className="relative bg-primary p-8 rounded-2xl border border-white/5">
                             <div className="bg-secondary/90 p-8 rounded-2xl">
-                                <h3 className="text-2xl font-bold text-white mb-8 text-center border-b border-white/10 pb-4">Our Driving Force</h3>
+                                <h3 className="text-2xl font-bold text-white mb-8 text-center border-b border-white/10 pb-4">OurForce</h3>
                                 <div className="space-y-8">
                                     <div>
                                         <div className="flex justify-between mb-2 items-end">

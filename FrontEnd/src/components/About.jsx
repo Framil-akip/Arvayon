@@ -20,52 +20,43 @@ const About = () => {
                         We deliver end-to-end design solutions including 2D, 3D, Interior, Exterior, and Structural services across Tamil Nadu. Our team is dedicated to turning your dream spaces into reality with precision and creativity.
                     </p>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        {/* Vision */}
-                        <div className="md:col-span-2">
-                            <h3 className="text-xl font-bold text-accent mb-2">Vision</h3>
-                            <p className="text-gray-300 text-sm leading-relaxed">
-                                To become a leading design consultancy in Tamil Nadu delivering innovative, sustainable & cost-effective solutions.
-                            </p>
-                        </div>
-
-                        {/* Mission */}
-                        <div>
-                            <h3 className="text-xl font-bold text-accent mb-2">Mission</h3>
-                            <ul className="space-y-3">
-                                <li className="flex items-center text-gray-300 text-sm">
-                                    <span className="text-accent mr-2">●</span>
-                                    Complete solutions under one roof
-                                </li>
-                                <li className="flex items-center text-gray-300 text-sm">
-                                    <span className="text-accent mr-2">●</span>
-                                    Creativity with functionality
-                                </li>
-                                <li className="flex items-center text-gray-300 text-sm">
-                                    <span className="text-accent mr-2">●</span>
-                                    Transparency, quality & timely delivery
-                                </li>
-                            </ul>
-                        </div>
-
-                        {/* Services */}
-                        <div>
-                            <h3 className="text-xl font-bold text-accent mb-2">Our Services</h3>
-                            <ul className="space-y-3">
-                                <li className="flex items-center text-gray-300 text-sm">
-                                    <span className="text-accent mr-2">●</span>
-                                    2D Plans & Drawings
-                                </li>
-                                <li className="flex items-center text-gray-300 text-sm">
-                                    <span className="text-accent mr-2">●</span>
-                                    3D Modelling & Rendering
-                                </li>
-                                <li className="flex items-center text-gray-300 text-sm">
-                                    <span className="text-accent mr-2">●</span>
-                                    Interior & Exterior Design
-                                </li>
-                            </ul>
-                        </div>
+                    <div className="md:col-span-2 space-y-6">
+                        {[
+                            {
+                                title: 'End-to-End Design Solutions',
+                                description: 'From concept to completion, we handle every aspect of your project.',
+                            },
+                            {
+                                title: 'Experienced & Qualified Team',
+                                description: 'Our team of experts brings years of industry experience to your project.',
+                            },
+                            {
+                                title: 'Creative & Functional Designs',
+                                description: 'We balance aesthetics with practicality to create spaces that work for you.',
+                            },
+                            {
+                                title: 'Transparent & Affordable Pricing',
+                                description: 'No hidden costs. We offer clear pricing structures to fit your budget.',
+                            },
+                            {
+                                title: 'On-Time Delivery',
+                                description: 'We value your time and are committed to delivering projects on schedule.',
+                            },
+                        ].map((benefit, index) => (
+                            <div key={index} className="flex items-start group">
+                                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary border border-accent/20 flex items-center justify-center mt-1 group-hover:bg-accent group-hover:text-primary transition-colors duration-300">
+                                    <span className="font-bold text-sm text-accent group-hover:text-primary">{index + 1}</span>
+                                </div>
+                                <div className="ml-4">
+                                    <h3 className="text-lg font-bold text-white mb-1 group-hover:text-accent transition-colors duration-300">
+                                        {benefit.title}
+                                    </h3>
+                                    <p className="text-gray-400 text-sm leading-relaxed">
+                                        {benefit.description}
+                                    </p>
+                                </div>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>

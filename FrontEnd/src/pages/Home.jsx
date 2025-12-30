@@ -12,6 +12,7 @@ import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 import ChatBot from '../components/ChatBot';
 import TrustSection from '../components/TrustSection';
+import Workflow from '../components/Workflow';
 
 const Home = () => {
     return (
@@ -26,8 +27,9 @@ const Home = () => {
             <VisionMission />
             {/* ProjectScroll moved to Hero background */}
             <Services />
+            <Workflow />
             {/* Packages section removed as per request */}
-            <WhyChooseUs />
+            {/* <WhyChooseUs /> */}
             <Portfolio />
             <Contact />
             <Footer />
