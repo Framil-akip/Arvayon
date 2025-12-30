@@ -1,8 +1,9 @@
 import AboutVisuals from './AboutVisuals';
+import { FiLayout, FiUsers, FiPenTool, FiTag, FiClock } from 'react-icons/fi';
 
 const About = () => {
     return (
-        <section id="about" className="py-4 px-4 md:px-12 lg:px-24 bg-secondary">
+        <section id="about" className="py-4 px-4 md:px-12 lg:px-24 bg-primary">
             <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8">
                 {/* Image */}
                 <div className="md:col-span-5">
@@ -11,7 +12,7 @@ const About = () => {
 
                 {/* Content */}
                 <div className="md:col-span-7">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4">About Us</h2>
+                    <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">About Us</h2>
                     <div className="w-20 h-1 bg-accent mb-6"></div>
                     <p className="text-gray-300 text-base leading-relaxed mb-6">
                         <span className="text-accent font-bold">Arvayon Pro Build Studio</span> is a professional Engineering & Design Consultancy based in Nagercoil.
@@ -25,27 +26,32 @@ const About = () => {
                             {
                                 title: 'End-to-End Design Solutions',
                                 description: 'From concept to completion, we handle every aspect of your project.',
+                                icon: FiLayout,
                             },
                             {
                                 title: 'Experienced & Qualified Team',
                                 description: 'Our team of experts brings years of industry experience to your project.',
+                                icon: FiUsers,
                             },
                             {
                                 title: 'Creative & Functional Designs',
                                 description: 'We balance aesthetics with practicality to create spaces that work for you.',
+                                icon: FiPenTool,
                             },
                             {
                                 title: 'Transparent & Affordable Pricing',
                                 description: 'No hidden costs. We offer clear pricing structures to fit your budget.',
+                                icon: FiTag,
                             },
                             {
                                 title: 'On-Time Delivery',
                                 description: 'We value your time and are committed to delivering projects on schedule.',
+                                icon: FiClock,
                             },
                         ].map((benefit, index) => (
                             <div key={index} className="flex items-start group">
-                                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary border border-accent/20 flex items-center justify-center mt-1 group-hover:bg-accent group-hover:text-primary transition-colors duration-300">
-                                    <span className="font-bold text-sm text-accent group-hover:text-primary">{index + 1}</span>
+                                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-secondary border border-accent/20 flex items-center justify-center mt-1 group-hover:bg-accent group-hover:text-primary transition-colors duration-300">
+                                    <benefit.icon className="w-5 h-5 text-accent group-hover:text-primary transition-colors duration-300" />
                                 </div>
                                 <div className="ml-4">
                                     <h3 className="text-lg font-bold text-white mb-1 group-hover:text-accent transition-colors duration-300">

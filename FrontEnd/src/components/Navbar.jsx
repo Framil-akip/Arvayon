@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import MobileBottomNav from './MobileBottomNav';
+import OfferAd from './OfferAd';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -16,15 +17,28 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className="fixed w-full z-50 bg-primary/95 backdrop-blur-sm border-b border-white/10">
+            <nav className="fixed w-full z-50 bg-primary/95 backdrop-blur-sm border border-accent md:border-0 md:border-b md:border-white/10">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex items-center justify-between h-20">
-                        <div className="flex-shrink-0">
-                            <Link to="/" className="text-2xl font-serif font-bold text-accent tracking-wider">
+                        <div className="flex-shrink-0 flex items-center">
+                            <Link to="/" className="text-2xl font-serif font-bold text-accent tracking-wider mr-4">
                                 ARVAYON
                                 <span className="block text-xs font-sans text-white tracking-[0.2em] uppercase">Pro Build Studio</span>
                             </Link>
+
+                            {/* Mobile Offer Marquee */}
+                            <div className="md:hidden flex-1 overflow-hidden h-6 flex items-center relative mask-image-linear-to-r">
+                                <div className="animate-marquee whitespace-nowrap inline-flex items-center">
+                                    <span className="text-accent text-[10px] font-bold tracking-widest px-4">
+                                        GET <span className="text-white px-1 bg-primary/30 rounded mx-1">40% OFF</span> ON PREMIUM INTERIORS
+                                    </span>
+                                    <span className="text-accent text-[10px] font-bold tracking-widest px-4">
+                                        GET <span className="text-white px-1 bg-primary/30 rounded mx-1">40% OFF</span> ON PREMIUM INTERIORS
+                                    </span>
+                                </div>
+                            </div>
                         </div>
+
                         <div className="hidden md:block">
                             <div className="ml-10 flex items-baseline space-x-8">
                                 {navLinks.map((link) => (
@@ -41,6 +55,7 @@ const Navbar = () => {
                     </div>
                 </div>
 
+                {/* Mobile Menu Dropdown */}
                 {isOpen && (
                     <div className="md:hidden bg-primary border-b border-white/10">
                         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
@@ -57,6 +72,9 @@ const Navbar = () => {
                         </div>
                     </div>
                 )}
+
+                {/* Desktop Offer Bar */}
+                <OfferAd className="hidden md:block" />
             </nav>
 
             {/* Mobile Bottom Navigation */}

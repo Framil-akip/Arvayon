@@ -1,8 +1,8 @@
 import React from 'react';
 
-const OfferAd = () => {
+const OfferAd = ({ className = '' }) => {
     return (
-        <div className="bg-gradient-to-r from-accent via-yellow-400 to-accent py-3 overflow-hidden shadow-lg border-y border-yellow-200 relative z-30">
+        <div className={`bg-gradient-to-r from-accent via-yellow-400 to-accent py-3 overflow-hidden shadow-lg border-y border-yellow-200 relative z-30 ${className}`}>
             <div className="max-w-7xl mx-auto px-4 flex items-center justify-between gap-4">
                 <div className="flex-1 overflow-hidden relative">
                     <div className="animate-marquee whitespace-nowrap inline-block">

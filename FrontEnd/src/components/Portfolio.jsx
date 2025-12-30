@@ -38,12 +38,12 @@ const Portfolio = () => {
     const isPortfolioPage = location.pathname === '/portfolio';
 
     return (
-        <section id="portfolio" className="section-padding bg-primary">
+        <section id="portfolio" className="section-padding bg-white">
             <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Portfolio</h2>
                     <div className="w-20 h-1 bg-accent mx-auto mb-6"></div>
-                    <p className="text-gray-400">A glimpse of our finest work</p>
+                    <p className="text-gray-600">A glimpse of our finest work</p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

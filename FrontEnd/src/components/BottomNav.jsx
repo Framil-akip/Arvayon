@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { FiHome, FiTag, FiImage, FiMenu } from 'react-icons/fi';
+import { FiHome, FiTag, FiImage, FiPhone } from 'react-icons/fi';
 
 const NavItem = ({ icon, label, href, isHome }) => {
   const classes = 'flex flex-col items-center justify-center flex-1 py-2 text-[11px]';
@@ -62,7 +62,7 @@ const BottomNav = () => {
             <NavItem icon={FiHome} label="Company" href="about" isHome={isHome} />
             <NavItem icon={FiTag} label="Offers" href="offers" isHome={isHome} />
             <NavItem icon={FiImage} label="Gallery" href="portfolio" isHome={isHome} />
-            <NavItem icon={FiMenu} label="Menu" href="services" isHome={isHome} />
+            <NavItem icon={FiPhone} label="Contact" href="contact" isHome={isHome} />
           </div>
         </nav>
       </div>

@@ -3,9 +3,9 @@ import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube, FaPhone, FaEnvelope,
 
 const Footer = () => {
     return (
-        <footer className="bg-black py-16 border-t border-white/10">
+        <footer className="bg-goldBg py-16 border-t border-white/20">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
                     {/* Brand Section */}
                     <div className="col-span-1 md:col-span-2 lg:col-span-1">
                         <h2 className="text-2xl font-serif font-bold text-white mb-6">
@@ -30,16 +30,7 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    {/* Quick Links */}
-                    <div>
-                        <h4 className="text-white font-bold mb-6 uppercase tracking-wider">Quick Links</h4>
-                        <ul className="space-y-4">
-                            <li><a href="#home" className="text-gray-400 hover:text-accent transition-colors">Home</a></li>
-                            <li><a href="#services" className="text-gray-400 hover:text-accent transition-colors">Services</a></li>
-                            <li><a href="#portfolio" className="text-gray-400 hover:text-accent transition-colors">Portfolio</a></li>
-                            <li><a href="#contact" className="text-gray-400 hover:text-accent transition-colors">Contact</a></li>
-                        </ul>
-                    </div>
+
 
                     {/* Services */}
                     <div>

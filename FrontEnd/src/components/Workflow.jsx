@@ -66,13 +66,13 @@ const Workflow = () => {
     }, []);
 
     return (
-        <section className="section-padding bg-primary border-t border-white/5">
+        <section className="section-padding bg-light border-t border-gray-200">
             <div className="max-w-7xl mx-auto px-4">
                 <div className="text-center mb-16">
                     <div className="inline-block px-4 py-1.5 bg-accent/10 border border-accent/20 rounded-full text-accent font-semibold text-xs uppercase tracking-widest mb-4">
                         Our Working Process
                     </div>
-                    <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 uppercase tracking-tight">
+                    <h2 className="text-3xl md:text-5xl font-bold text-primary mb-6 uppercase tracking-tight">
                         PROJECT COMPLETION IN <span className="text-accent">40 WORKING DAYS*</span>
                     </h2>
                     <div className="w-24 h-1 bg-accent mx-auto mb-10"></div>
@@ -80,7 +80,7 @@ const Workflow = () => {
 
                 <div className="relative">
                     {/* Connecting Line (Desktop) - Positioned at bottom of circles (top-24 = 96px, circle height is 96px) */}
-                    <div className="hidden lg:block absolute top-24 left-0 w-full border-t-2 border-dashed border-amber-300/30"></div>
+                    <div className="hidden lg:block absolute top-24 left-0 w-full border-t-2 border-dashed border-accent/30"></div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-12 lg:gap-8 overflow-visible">
                         {steps.map((step, index) => {
@@ -91,14 +91,14 @@ const Workflow = () => {
                                     <div className="relative mb-6">
                                         {/* Outer Glow Ring - Active State */}
                                         <div className={`absolute inset-0 rounded-full blur-2xl transition-all duration-700 pointer-events-none
-                                            ${isActive ? 'bg-accent/60 scale-150' : 'bg-amber-200/10 scale-100 group-hover:bg-amber-200/30 group-hover:scale-125'}`}>
+                                            ${isActive ? 'bg-accent/60 scale-150' : 'bg-accent/10 scale-100 group-hover:bg-accent/20 group-hover:scale-125'}`}>
                                         </div>
 
                                         {/* Icon Container */}
                                         <div className={`relative w-24 h-24 rounded-full border-2 flex items-center justify-center z-10 transition-all duration-500
                                             ${isActive
                                                 ? 'bg-accent/20 border-accent text-accent scale-110 shadow-[0_0_30px_rgba(255,215,0,0.4)]'
-                                                : 'bg-primary border-amber-300/50 text-amber-300 group-hover:border-accent group-hover:text-accent group-hover:bg-accent/10'
+                                                : 'bg-primary border-accent/30 text-accent group-hover:border-accent group-hover:text-accent group-hover:bg-accent/10'
                                             }`}>
 
                                             {/* Inner Pulse Ring */}
@@ -115,10 +115,10 @@ const Workflow = () => {
 
                                     {/* Content */}
                                     <div className="text-center">
-                                        <h3 className={`text-lg font-bold mb-2 transition-colors duration-300 ${isActive ? 'text-accent' : 'text-white group-hover:text-accent'}`}>
+                                        <h3 className={`text-lg font-bold mb-2 transition-colors duration-300 ${isActive ? 'text-accent' : 'text-primary group-hover:text-accent'}`}>
                                             {step.title}
                                         </h3>
-                                        <p className="text-gray-400 text-sm leading-relaxed max-w-[160px] mx-auto">
+                                        <p className="text-gray-600 text-sm leading-relaxed max-w-[160px] mx-auto">
                                             {step.desc}
                                         </p>
                                     </div>

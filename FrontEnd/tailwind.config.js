@@ -11,6 +11,10 @@ export default {
         accent: '#FFD700', // Gold
         secondary: '#1f1f1f', // Lighter charcoal
         textGray: '#d1d5db',
+        light: '#f9fafb', // Light gray/white for backgrounds
+        darkText: '#1f2937', // Dark gray for text on light backgrounds
+        goldBg: '#C6A868', // Muted luxury gold/bronze
+        cream: '#FDFBF7', // Warm light white/cream
       },
       fontFamily: {
         serif: ['Playfair Display', 'serif'],

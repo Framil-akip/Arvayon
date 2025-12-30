@@ -24,7 +24,7 @@ const Hero = () => {
         return () => clearInterval(interval);
     }, [images.length]);
     return (
-        <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
+        <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden bg-primary">
             {/* Background Image Carousel */}
             {images.map((img, index) => (
                 <div

@@ -79,7 +79,7 @@ const TrustSection = () => {
         <section className="section-padding bg-primary border-t border-white/5">
             <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-5xl font-bold mb-4 uppercase tracking-tight">
+                    <h2 className="text-3xl md:text-5xl font-bold mb-4 uppercase tracking-tight text-white">
                         Why Trust <span className="text-accent">Us?</span>
                     </h2>
                     <div className="w-24 h-1 bg-accent mx-auto"></div>
