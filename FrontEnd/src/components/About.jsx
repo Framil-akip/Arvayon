@@ -3,7 +3,7 @@ import { FiLayout, FiUsers, FiPenTool, FiTag, FiClock } from 'react-icons/fi';
 
 const About = () => {
     return (
-        <section id="about" className="py-4 px-4 md:px-12 lg:px-24 bg-primary">
+        <section id="about" className="py-4 px-4 md:px-12 lg:px-24 bg-white">
             <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8">
                 {/* Image */}
                 <div className="md:col-span-5">
@@ -12,12 +12,12 @@ const About = () => {
 
                 {/* Content */}
                 <div className="md:col-span-7">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">About Us</h2>
+                    <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">About Us</h2>
                     <div className="w-20 h-1 bg-accent mb-6"></div>
-                    <p className="text-gray-300 text-base leading-relaxed mb-6">
+                    <p className="text-gray-600 text-base leading-relaxed mb-6">
                         <span className="text-accent font-bold">Arvayon Pro Build Studio</span> is a professional Engineering & Design Consultancy based in Nagercoil.
                     </p>
-                    <p className="text-gray-300 text-base leading-relaxed mb-8">
+                    <p className="text-gray-600 text-base leading-relaxed mb-8">
                         We deliver end-to-end design solutions including 2D, 3D, Interior, Exterior, and Structural services across Tamil Nadu. Our team is dedicated to turning your dream spaces into reality with precision and creativity.
                     </p>
 
@@ -50,14 +50,14 @@ const About = () => {
                             },
                         ].map((benefit, index) => (
                             <div key={index} className="flex items-start group">
-                                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-secondary border border-accent/20 flex items-center justify-center mt-1 group-hover:bg-accent group-hover:text-primary transition-colors duration-300">
+                                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary border border-accent/20 flex items-center justify-center mt-1 group-hover:bg-accent group-hover:text-primary transition-colors duration-300">
                                     <benefit.icon className="w-5 h-5 text-accent group-hover:text-primary transition-colors duration-300" />
                                 </div>
                                 <div className="ml-4">
-                                    <h3 className="text-lg font-bold text-white mb-1 group-hover:text-accent transition-colors duration-300">
+                                    <h3 className="text-lg font-bold text-primary mb-1 group-hover:text-accent transition-colors duration-300">
                                         {benefit.title}
                                     </h3>
-                                    <p className="text-gray-400 text-sm leading-relaxed">
+                                    <p className="text-gray-500 text-sm leading-relaxed">
                                         {benefit.description}
                                     </p>
                                 </div>

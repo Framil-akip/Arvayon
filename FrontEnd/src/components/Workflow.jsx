@@ -72,8 +72,8 @@ const Workflow = () => {
                     <div className="inline-block px-4 py-1.5 bg-accent/10 border border-accent/20 rounded-full text-accent font-semibold text-xs uppercase tracking-widest mb-4">
                         Our Working Process
                     </div>
-                    <h2 className="text-3xl md:text-5xl font-bold text-primary mb-6 uppercase tracking-tight">
-                        PROJECT COMPLETION IN <span className="text-accent">40 WORKING DAYS*</span>
+                    <h2 className="text-3xl md:text-5xl font-bold text-accent mb-6 uppercase tracking-tight">
+                        PROJECT COMPLETION IN 40 WORKING DAYS*
                     </h2>
                     <div className="w-24 h-1 bg-accent mx-auto mb-10"></div>
                 </div>

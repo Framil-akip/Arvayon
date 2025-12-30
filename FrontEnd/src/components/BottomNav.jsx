@@ -27,10 +27,10 @@ const NavItem = ({ icon, label, href, isHome }) => {
 const BrandButton = ({ isHome }) => {
   const jsx = (
     <div className="relative">
-      <div className="w-16 h-16 rounded-full border-4 border-secondary bg-transparent"></div>
+      <div className="w-16 h-16 rounded-full border-4 border-primary bg-primary shadow-[0_0_15px_rgba(198,168,104,0.3)]"></div>
       <div className="absolute inset-0 flex items-center justify-center">
-        <div className="w-14 h-14 rounded-full bg-white text-accent font-bold shadow-[0_10px_24px_rgba(0,0,0,0.35)] border border-white/40 flex items-center justify-center">
-          ARVAYON
+        <div className="w-14 h-14 rounded-full bg-primary text-accent font-bold shadow-lg border border-accent/30 flex items-center justify-center">
+          <span className="text-[10px] tracking-widest">ABI</span>
         </div>
       </div>
     </div>
@@ -57,7 +57,7 @@ const BottomNav = () => {
           <BrandButton isHome={isHome} />
         </div>
 
-        <nav className="bg-primary/95 backdrop-blur-sm border-t border-white/10 px-2">
+        <nav className="bg-primary/95 backdrop-blur-sm border-t border-accent/20 px-2">
           <div className="flex items-stretch justify-between">
             <NavItem icon={FiHome} label="Company" href="about" isHome={isHome} />
             <NavItem icon={FiTag} label="Offers" href="offers" isHome={isHome} />
