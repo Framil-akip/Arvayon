@@ -4,6 +4,8 @@ import projectPlanning from '../assets/project-planning.png';
 import projectDesigning from '../assets/project-designing.png';
 import projectBuilding from '../assets/project-building.png';
 
+import OfferAd from './OfferAd';
+
 const Hero = () => {
     const images = [projectPlanning, projectDesigning, projectBuilding];
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -25,6 +27,11 @@ const Hero = () => {
     }, [images.length]);
     return (
         <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden bg-primary">
+            {/* Offer Bar - Positioned absolute at top */}
+            <div className="absolute top-0 left-0 w-full z-40 hidden md:block">
+                <OfferAd />
+            </div>
+
             {/* Background Image Carousel */}
             {images.map((img, index) => (
                 <div
@@ -63,14 +70,14 @@ const Hero = () => {
 
             {/* Content */}
             <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight animate-fade-in-up uppercase">
-                    End-to-End Architecture, <br />Interior & Construction Solutions
+                <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight animate-fade-in-up uppercase grid grid-cols-3 gap-y-2 w-full">
+                    <span className="col-start-1 row-start-1 text-left">Design</span>
+                    <span className="col-start-2 row-start-2 text-center">Beyond</span>
+                    <span className="col-start-3 row-start-3 text-right">Imagination</span>
                 </h1>
-                <p className="text-lg md:text-2xl text-accent mb-0 font-medium tracking-widest animate-fade-in-up delay-200 uppercase">
-                    Architecture | Structural | Interior | PMC | Construction
-                </p>
+
             </div>
-        </section>
+        </section >
     );
 };
 

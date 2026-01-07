@@ -54,10 +54,13 @@ const Services = () => {
         <section id="services" className="section-padding bg-[#FDFBF7]">
             <div className="max-w-7xl mx-auto px-4">
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-5xl font-bold mb-4 uppercase tracking-tight text-primary">
-                        Our <span className="text-accent">Services</span>
-                    </h2>
-                    <div className="w-24 h-1 bg-accent mx-auto mb-6"></div>
+                    <div className="flex justify-center mb-8">
+                        <div className="inline-block border-2 border-[#D4B878] px-6 py-2 rounded-lg">
+                            <h2 className="text-3xl md:text-5xl font-bold uppercase tracking-tight text-[#D4B878] m-0">
+                                Our Services
+                            </h2>
+                        </div>
+                    </div>
                     <p className="text-gray-600 max-w-2xl mx-auto">
                         Comprehensive architectural and engineering solutions for your projects.
                     </p>

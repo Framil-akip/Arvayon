@@ -4,8 +4,8 @@ const ChatBot = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <div className="fixed  bottom-24 md:bottom-6 right-1 md:right-6 z-50 flex flex-col items-end">
-            <div className="fixed top-[30%] md:top-1/2 -translate-y-1/2 right-0 md:right-3 flex flex-col items-center gap-2 md:gap-3 rounded-2xl md:rounded-lg px-0 py-1.5 md:px-2 md:py-2 text-white">
+        <div className="fixed  bottom-24 md:bottom-6 right-0 md:right-0 z-50 flex flex-col items-end">
+            <div className="fixed top-[30%] md:top-1/2 -translate-y-1/2 right-0 md:right-0 flex flex-col items-center md:items-end gap-2 md:gap-3 rounded-2xl md:rounded-lg px-0 py-1.5 md:px-2 md:py-2 text-white">
                 <a
                     href="https://wa.me/919363035048?text=Hi%20Arvayon%2C%20I%27d%20like%20a%20free%20estimate."
                     target="_blank"
@@ -32,10 +32,10 @@ const ChatBot = () => {
                 </a>
 
                 {/* Free Estimate Button - Vertical on Mobile */}
-                <div className="fixed right-2 top-[270%] transform translate-x-[42%] rotate-[-90deg] origin-center z-50 md:static md:transform-none md:w-24 md:translate-x-0 md:rotate-0">
+                <div className="fixed right-[18px] top-[70%] md:static md:w-24 md:transform-none md:rotate-0 origin-center transform rotate-[-90deg] translate-x-[50%] z-50">
                     <a
                         href="#contact"
-                        className="block bg-accent text-primary font-bold rounded-md md:rounded-md shadow-lg border border-primary/20 px-3 py-1.5 text-[10px] md:text-[10px] text-center hover:bg-yellow-400 transition-colors whitespace-nowrap uppercase tracking-wider"
+                        className="block bg-[#D4B878] text-primary font-bold rounded-md shadow-lg border border-primary/20 px-3 py-1.5 text-[10px] text-center hover:scale-105 transform transition-all duration-300 whitespace-nowrap uppercase tracking-wider"
                     >
                         Free Estimate
                     </a>
@@ -98,7 +98,7 @@ const ChatBot = () => {
             {/* Toggle Button */}
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="w-12 h-12 md:w-14 md:h-14 bg-accent hover:bg-yellow-400 text-primary rounded-full shadow-lg flex items-center justify-center transform transition-transform duration-300 hover:scale-110 focus:outline-none"
+                className="w-12 h-12 md:w-14 md:h-14 bg-[#D4B878] text-primary rounded-full shadow-lg flex items-center justify-center transform transition-transform duration-300 hover:scale-110 focus:outline-none"
             >
                 {isOpen ? (
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

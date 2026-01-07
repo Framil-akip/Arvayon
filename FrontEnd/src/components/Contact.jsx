@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaPhone, FaEnvelope, FaInstagram, FaFacebookF, FaLinkedinIn, FaPinterestP } from 'react-icons/fa';
 
 const Contact = () => {
     return (
@@ -6,54 +7,54 @@ const Contact = () => {
             <div className="max-w-7xl mx-auto">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
                     {/* Contact Info */}
+                    {/* Contact Info */}
+                    {/* Contact Info */}
                     <div>
-                        <h2 className="text-3xl md:text-4xl font-bold mb-6">Get In Touch</h2>
-                        <div className="w-20 h-1 bg-accent mb-10"></div>
+                        <div className="inline-block border-2 border-[#D4B878] px-6 py-2 rounded-lg mb-8">
+                            <h2 className="text-3xl md:text-4xl font-bold text-[#D4B878] m-0">Get In Touch</h2>
+                        </div>
+
                         <p className="text-gray-600 mb-10 leading-relaxed">
                             Ready to start your dream project? Contact us today for a free consultation and quote.
                         </p>
 
-
-
                         <div className="space-y-8">
-
-
-
-
-                            <div className="flex items-start">
-                                <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center text-accent mr-6 flex-shrink-0 border border-white/5">
-                                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                                    </svg>
+                            <div className="flex items-center">
+                                <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center text-[#D4B878] mr-6 flex-shrink-0 border border-white/5 shadow-md">
+                                    <FaPhone size={20} />
                                 </div>
                                 <div>
-                                    <div className="mb-3">
-                                        <div className="w-28 h-28 relative rounded-xl overflow-hidden border border-white/10 hover:border-accent transition-colors duration-300">
-                                            <div className="absolute inset-0 z-10 pointer-events-none"></div>
-                                            <iframe
-                                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.424667284687!2d77.4326!3d8.1833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOMKwMTEnMDAuMCJOIDc3wrAyNSc1Ny40IkU!5e0!3m2!1sen!2sin!4v1635765432109!5m2!1sen!2sin"
-                                                width="100%"
-                                                height="100%"
-                                                style={{ border: 0 }}
-                                                allowFullScreen
-                                                loading="lazy"
-                                                title="Mini Map"
-                                                className="w-full h-full object-cover"
-                                            ></iframe>
-                                            <a
-                                                href="https://www.google.com/maps/search/?api=1&query=Antony+Complex,+Ramanputhur+Junction,+Nagercoil,+629001"
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="absolute inset-0 z-20"
-                                                title="View on Map"
-                                            ></a>
-                                        </div>
-                                    </div>
-                                    <p className="text-gray-400">
-                                        Antony Complex, Ramanputhur Junction,<br />
-                                        Nagercoil, Kanyakumari District – 629001
-                                    </p>
+                                    <h4 className="text-xl font-bold text-gray-800 mb-2">Phone</h4>
+                                    <p className="text-gray-600">+91 93630 35048</p>
+                                </div>
+                            </div>
+
+
+                            <div className="flex items-center">
+                                <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center text-[#D4B878] mr-6 flex-shrink-0 border border-white/5 shadow-md">
+                                    <FaEnvelope size={20} />
+                                </div>
+                                <div>
+                                    <h4 className="text-xl font-bold text-gray-800 mb-2">Email</h4>
+                                    <p className="text-gray-600">admin@arvayonpbs.com</p>
+                                </div>
+                            </div>
+
+                            <div className="pt-6 border-t border-gray-200">
+                                <h4 className="text-xl font-bold text-gray-800 mb-6">Follow Us</h4>
+                                <div className="flex space-x-4">
+                                    <a href="#" className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center text-[#D4B878] hover:bg-[#D4B878] hover:text-primary transition-all duration-300 border border-white/5 shadow-md group">
+                                        <FaInstagram size={20} />
+                                    </a>
+                                    <a href="#" className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center text-[#D4B878] hover:bg-[#D4B878] hover:text-primary transition-all duration-300 border border-white/5 shadow-md group">
+                                        <FaFacebookF size={20} />
+                                    </a>
+                                    <a href="#" className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center text-[#D4B878] hover:bg-[#D4B878] hover:text-primary transition-all duration-300 border border-white/5 shadow-md group">
+                                        <FaLinkedinIn size={20} />
+                                    </a>
+                                    <a href="#" className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center text-[#D4B878] hover:bg-[#D4B878] hover:text-primary transition-all duration-300 border border-white/5 shadow-md group">
+                                        <FaPinterestP size={20} />
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -101,7 +102,7 @@ const Contact = () => {
                                     placeholder="Tell us about your project"
                                 ></textarea>
                             </div>
-                            <button type="submit" className="w-full btn-primary">
+                            <button type="submit" className="w-full bg-[#D4B878] text-primary px-8 py-4 rounded-lg font-bold hover:scale-105 transform transition-all duration-300 uppercase tracking-widest shadow-lg hover:shadow-xl">
                                 Send Message
                             </button>
                         </form>

@@ -2,7 +2,7 @@ import React from 'react';
 
 const OfferAd = ({ className = '' }) => {
     return (
-        <div className={`bg-gradient-to-r from-accent via-yellow-400 to-accent py-3 overflow-hidden shadow-lg border-y border-yellow-200 relative z-30 ${className}`}>
+        <div className={`bg-[#D4B878] py-3 overflow-hidden shadow-lg border-y border-[#C6A868] relative z-30 ${className}`}>
             <div className="max-w-7xl mx-auto px-4 flex items-center justify-between gap-4">
                 <div className="flex-1 overflow-hidden relative">
                     <div className="animate-marquee whitespace-nowrap inline-block">
@@ -16,7 +16,7 @@ const OfferAd = ({ className = '' }) => {
                 </div>
 
                 <div className="flex-shrink-0">
-                    <a href="#contact" className="bg-primary hover:bg-black text-accent font-bold py-2 px-6 shadow-md transition-all duration-300 whitespace-nowrap flex items-center justify-center h-10 uppercase text-sm tracking-widest">
+                    <a href="#contact" className="bg-primary hover:bg-black text-[#D4B878] font-bold py-2 px-6 shadow-md transition-all duration-300 whitespace-nowrap flex items-center justify-center h-10 uppercase text-sm tracking-widest">
                         Claim Now
                     </a>
                 </div>

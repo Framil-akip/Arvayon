@@ -19,12 +19,13 @@ const Home = () => {
             <Navbar />
             <div className="pt-36 md:pt-24">
                 <Hero />
-                <TrustSection />
+               
                 <About />
                 <VisionMission />
                 {/* ProjectScroll moved to Hero background */}
                 <Services />
-                <Workflow />
+                <TrustSection />
+                {/* <Workflow /> */}
                 {/* Packages section removed as per request */}
                 {/* <WhyChooseUs /> */}
                 <Portfolio />

@@ -41,8 +41,11 @@ const Portfolio = () => {
         <section id="portfolio" className="section-padding bg-white">
             <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Portfolio</h2>
-                    <div className="w-20 h-1 bg-accent mx-auto mb-6"></div>
+                    <div className="flex justify-center mb-8">
+                        <div className="inline-block border-2 border-[#D4B878] px-6 py-2 rounded-lg">
+                            <h2 className="text-3xl md:text-4xl font-bold text-[#D4B878] m-0">Our Portfolio</h2>
+                        </div>
+                    </div>
                     <p className="text-gray-600">A glimpse of our finest work</p>
                 </div>
 
@@ -70,7 +73,10 @@ const Portfolio = () => {
 
                 {!isPortfolioPage && (
                     <div className="text-center mt-12">
-                        <Link to="/portfolio" className="btn-secondary inline-block">
+                        <Link
+                            to="/portfolio"
+                            className="btn-primary inline-block bg-[#D4B878] text-primary px-8 py-4 rounded-lg font-bold hover:scale-105 transform transition-all duration-300 uppercase tracking-widest shadow-lg hover:shadow-xl"
+                        >
                             View All Projects
                         </Link>
                     </div>

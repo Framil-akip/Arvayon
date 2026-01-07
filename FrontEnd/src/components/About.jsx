@@ -12,10 +12,11 @@ const About = () => {
 
                 {/* Content */}
                 <div className="md:col-span-7">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">About Us</h2>
-                    <div className="w-20 h-1 bg-accent mb-6"></div>
+                    <div className="inline-block border-2 border-[#D4B878] px-6 py-2 rounded-lg mb-8">
+                        <h2 className="text-3xl md:text-4xl font-bold text-[#D4B878] m-0">About Us</h2>
+                    </div>
                     <p className="text-gray-600 text-base leading-relaxed mb-6">
-                        <span className="text-accent font-bold">Arvayon Pro Build Studio</span> is a professional Engineering & Design Consultancy based in Nagercoil.
+                        <span className="text-[#D4B878] font-bold">Arvayon Pro Build Studio</span> is a professional Engineering & Design Consultancy based in Nagercoil.
                     </p>
                     <p className="text-gray-600 text-base leading-relaxed mb-8">
                         We deliver end-to-end design solutions including 2D, 3D, Interior, Exterior, and Structural services across Tamil Nadu. Our team is dedicated to turning your dream spaces into reality with precision and creativity.
@@ -50,11 +51,11 @@ const About = () => {
                             },
                         ].map((benefit, index) => (
                             <div key={index} className="flex items-start group">
-                                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary border border-accent/20 flex items-center justify-center mt-1 group-hover:bg-accent group-hover:text-primary transition-colors duration-300">
-                                    <benefit.icon className="w-5 h-5 text-accent group-hover:text-primary transition-colors duration-300" />
+                                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary border border-[#D4B878]/20 flex items-center justify-center mt-1 group-hover:bg-[#D4B878] group-hover:text-primary transition-colors duration-300">
+                                    <benefit.icon className="w-5 h-5 text-[#D4B878] group-hover:text-primary transition-colors duration-300" />
                                 </div>
                                 <div className="ml-4">
-                                    <h3 className="text-lg font-bold text-primary mb-1 group-hover:text-accent transition-colors duration-300">
+                                    <h3 className="text-lg font-bold text-primary mb-1 group-hover:text-[#D4B878] transition-colors duration-300">
                                         {benefit.title}
                                     </h3>
                                     <p className="text-gray-500 text-sm leading-relaxed">

@@ -76,8 +76,8 @@ const Packages = () => {
                         <div
                             key={index}
                             className={`relative rounded-2xl overflow-hidden transition-all duration-300 ${pkg.isPopular
-                                    ? 'bg-secondary border-2 border-accent transform md:-translate-y-4 shadow-[0_0_30px_rgba(255,215,0,0.15)]'
-                                    : 'bg-secondary/50 border border-white/10 hover:border-accent/30'
+                                ? 'bg-secondary border-2 border-accent transform md:-translate-y-4 shadow-[0_0_30px_rgba(255,215,0,0.15)]'
+                                : 'bg-secondary/50 border border-white/10 hover:border-accent/30'
                                 }`}
                         >
                             {pkg.isPopular && (
@@ -133,8 +133,8 @@ const Packages = () => {
                                     <a
                                         href="#contact"
                                         className={`block w-full py-3 px-6 rounded text-center font-bold uppercase tracking-wide transition-colors duration-300 ${pkg.isPopular
-                                                ? 'bg-accent text-primary hover:bg-yellow-400'
-                                                : 'border border-gray-600 text-gray-300 hover:border-accent hover:text-accent'
+                                            ? 'bg-accent text-primary hover:bg-yellow-400'
+                                            : 'border border-gray-600 text-gray-300 hover:border-accent hover:text-accent'
                                             }`}
                                     >
                                         Choose Plan

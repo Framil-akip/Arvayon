@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import MobileBottomNav from './MobileBottomNav';
-import OfferAd from './OfferAd';
+
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const location = useLocation();
+    const isHomePage = location.pathname === '/';
 
     const navLinks = [
         { name: 'Home', href: 'home' },
@@ -27,29 +29,52 @@ const Navbar = () => {
                             </Link>
 
                             {/* Mobile Offer Marquee */}
-                            <div className="md:hidden flex-1 overflow-hidden h-6 flex items-center relative mask-image-linear-to-r">
-                                <div className="animate-marquee whitespace-nowrap inline-flex items-center">
-                                    <span className="text-accent text-[10px] font-bold tracking-widest px-4">
-                                        GET <span className="text-white px-1 bg-primary/30 rounded mx-1">40% OFF</span> ON PREMIUM INTERIORS
-                                    </span>
-                                    <span className="text-accent text-[10px] font-bold tracking-widest px-4">
-                                        GET <span className="text-white px-1 bg-primary/30 rounded mx-1">40% OFF</span> ON PREMIUM INTERIORS
-                                    </span>
+                            {isHomePage && (
+                                <div className="md:hidden flex-1 overflow-hidden h-6 flex items-center relative mask-image-linear-to-r">
+                                    <div className="animate-marquee whitespace-nowrap inline-flex items-center">
+                                        <span className="text-accent text-[10px] font-bold tracking-widest px-4">
+                                            GET <span className="text-white px-1 bg-primary/30 rounded mx-1">40% OFF</span> ON PREMIUM INTERIORS
+                                        </span>
+                                        <span className="text-accent text-[10px] font-bold tracking-widest px-4">
+                                            GET <span className="text-white px-1 bg-primary/30 rounded mx-1">40% OFF</span> ON PREMIUM INTERIORS
+                                        </span>
+                                    </div>
                                 </div>
-                            </div>
+                            )}
                         </div>
 
                         <div className="hidden md:block">
                             <div className="ml-10 flex items-baseline space-x-8">
-                                {navLinks.map((link) => (
-                                    <Link
-                                        key={link.name}
-                                        to={link.href === 'home' ? '/' : `/${link.href}`}
-                                        className="text-gray-300 hover:text-accent px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300 uppercase tracking-wide cursor-pointer"
-                                    >
-                                        {link.name}
-                                    </Link>
-                                ))}
+                                {navLinks.map((link) => {
+                                    const isHomeLink = link.href === 'home';
+                                    const targetId = link.href;
+
+                                    if (isHomePage) {
+                                        return (
+                                            <a
+                                                key={link.name}
+                                                href={`#${targetId}`}
+                                                className="text-gray-300 hover:text-[#D4B878] px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300 uppercase tracking-wide cursor-pointer"
+                                                onClick={(e) => {
+                                                    e.preventDefault();
+                                                    document.getElementById(targetId)?.scrollIntoView({ behavior: 'auto' });
+                                                }}
+                                            >
+                                                {link.name}
+                                            </a>
+                                        );
+                                    }
+
+                                    return (
+                                        <Link
+                                            key={link.name}
+                                            to={isHomeLink ? '/' : `/${link.href}`}
+                                            className="text-gray-300 hover:text-[#D4B878] px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300 uppercase tracking-wide cursor-pointer"
+                                        >
+                                            {link.name}
+                                        </Link>
+                                    );
+                                })}
                             </div>
                         </div>
                     </div>
@@ -59,22 +84,43 @@ const Navbar = () => {
                 {isOpen && (
                     <div className="md:hidden bg-primary border-b border-accent/20">
                         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                            {navLinks.map((link) => (
-                                <Link
-                                    key={link.name}
-                                    to={link.href === 'home' ? '/' : `/${link.href}`}
-                                    className="text-gray-300 hover:text-accent block px-3 py-2 rounded-md text-base font-medium uppercase"
-                                    onClick={() => setIsOpen(false)}
-                                >
-                                    {link.name}
-                                </Link>
-                            ))}
+                            {navLinks.map((link) => {
+                                const isHomeLink = link.href === 'home';
+                                const targetId = link.href;
+
+                                if (isHomePage) {
+                                    return (
+                                        <a
+                                            key={link.name}
+                                            href={`#${targetId}`}
+                                            className="text-gray-300 hover:text-[#D4B878] block px-3 py-2 rounded-md text-base font-medium uppercase"
+                                            onClick={(e) => {
+                                                e.preventDefault();
+                                                setIsOpen(false);
+                                                document.getElementById(targetId)?.scrollIntoView({ behavior: 'auto' });
+                                            }}
+                                        >
+                                            {link.name}
+                                        </a>
+                                    );
+                                }
+
+                                return (
+                                    <Link
+                                        key={link.name}
+                                        to={isHomeLink ? '/' : `/${link.href}`}
+                                        className="text-gray-300 hover:text-[#D4B878] block px-3 py-2 rounded-md text-base font-medium uppercase"
+                                        onClick={() => setIsOpen(false)}
+                                    >
+                                        {link.name}
+                                    </Link>
+                                );
+                            })}
                         </div>
                     </div>
                 )}
 
-                {/* Desktop Offer Bar */}
-                <OfferAd className="hidden md:block" />
+                {/* Desktop Offer Bar - Removed */}
             </nav>
 
             {/* Mobile Bottom Navigation */}
