@@ -2,7 +2,7 @@ import React from 'react';
 
 const OfferAd = ({ className = '' }) => {
     return (
-        <div className={`bg-[#D4B878] py-5 overflow-hidden shadow-lg border-y border-[#C6A868] relative z-30 ${className}`}>
+        <div className={`bg-[#D4B878] py-3 overflow-hidden shadow-lg border-y border-[#C6A868] relative z-30 ${className}`}>
             <div className="max-w-7xl mx-auto px-4 flex items-center justify-between gap-4">
                 <div className="flex-1 overflow-hidden relative">
                     <div className="animate-marquee whitespace-nowrap inline-block">

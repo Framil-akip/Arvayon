@@ -7,6 +7,7 @@ import PortfolioPage from './pages/PortfolioPage';
 import ContactPage from './pages/ContactPage';
 import EmployeeCard from './pages/EmployeeCard';
 import BottomNav from './components/BottomNav';
+import ScrollToTop from './components/ScrollToTop';
 
 const MainLayout = () => {
   return (
@@ -27,8 +28,10 @@ const MainLayout = () => {
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         <Route path="/profile/:id" element={<EmployeeCard />} />
+
         <Route path="/*" element={<MainLayout />} />
       </Routes>
     </Router>

@@ -96,16 +96,17 @@ const ChatBot = () => {
             )}
 
             {/* Toggle Button */}
+            {/* Toggle Button */}
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="w-12 h-12 md:w-14 md:h-14 bg-[#D4B878] text-primary rounded-full shadow-lg flex items-center justify-center transform transition-transform duration-300 hover:scale-110 focus:outline-none"
+                className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-primary flex items-center justify-center shadow-[0_2px_12px_rgba(0,0,0,0.45)] transform transition-transform duration-300 hover:scale-110 focus:outline-none"
             >
                 {isOpen ? (
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-6 h-6 text-[#D4B878]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
                     </svg>
                 ) : (
-                    <svg className="w-6 h-6 md:w-7 md:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-6 h-6 md:w-7 md:h-7 text-[#D4B878]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
                     </svg>
                 )}

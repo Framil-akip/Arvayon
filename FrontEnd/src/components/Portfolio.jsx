@@ -4,6 +4,8 @@ import portfolio1 from '../assets/portfolio-1.png';
 import portfolio2 from '../assets/portfolio-2.png';
 import heroBg from '../assets/hero-bg.png';
 import brochureHero from '../assets/brochure-hero.jpg';
+import projectBuilding from '../assets/project-building.png';
+import serviceInteriorNew from '../assets/service-interior-new.png';
 
 const Portfolio = () => {
     const projects = [
@@ -31,6 +33,18 @@ const Portfolio = () => {
             title: 'Contemporary Residence',
             category: 'Architecture',
         },
+        {
+            id: 5,
+            image: projectBuilding,
+            title: 'Commercial Complex',
+            category: 'Construction',
+        },
+        {
+            id: 6,
+            image: serviceInteriorNew,
+            title: 'Modern Office Space',
+            category: 'Interior',
+        },
     ];
 
 
@@ -49,10 +63,10 @@ const Portfolio = () => {
                     <p className="text-gray-600">A glimpse of our finest work</p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {projects.map((project) => (
                         <div key={project.id} className="group relative overflow-hidden rounded-xl cursor-pointer">
-                            <div className="aspect-w-16 aspect-h-9 h-[300px] md:h-[400px]">
+                            <div className="aspect-w-16 aspect-h-9 h-[250px] md:h-[300px]">
                                 <img
                                     src={project.image}
                                     alt={project.title}

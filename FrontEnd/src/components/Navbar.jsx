@@ -68,7 +68,7 @@ const Navbar = () => {
                                     return (
                                         <Link
                                             key={link.name}
-                                            to={isHomeLink ? '/' : `/${link.href}`}
+                                            to={isHomeLink ? '/' : `/#${link.href}`}
                                             className="text-gray-300 hover:text-[#D4B878] px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300 uppercase tracking-wide cursor-pointer"
                                         >
                                             {link.name}
@@ -108,7 +108,7 @@ const Navbar = () => {
                                 return (
                                     <Link
                                         key={link.name}
-                                        to={isHomeLink ? '/' : `/${link.href}`}
+                                        to={isHomeLink ? '/' : `/#${link.href}`}
                                         className="text-gray-300 hover:text-[#D4B878] block px-3 py-2 rounded-md text-base font-medium uppercase"
                                         onClick={() => setIsOpen(false)}
                                     >
