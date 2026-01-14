@@ -1,3 +1,4 @@
+import logo from '../assets/arvayon-logo-v3.png';
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import MobileBottomNav from './MobileBottomNav';
@@ -19,13 +20,12 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className="fixed w-full z-50 bg-primary/95 backdrop-blur-sm border border-accent md:border-0 md:border-b md:border-white/10">
+            <nav className="fixed w-full z-50 bg-primary/95 backdrop-blur-sm border-b border-white/10 md:border-white/10">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex items-center justify-between h-20">
                         <div className="flex-shrink-0 flex items-center">
-                            <Link to="/" className="text-2xl font-serif font-bold text-accent tracking-wider mr-4">
-                                ARVAYON
-                                <span className="block text-xs font-sans text-white tracking-[0.2em] uppercase">Pro Build Studio</span>
+                            <Link to="/" className="mt-0 mb-4">
+                                <img src={logo} alt="ARVAYON Pro Build Studio" className="h-[11rem] w-auto object-contain transform scale-150" />
                             </Link>
 
                             {/* Mobile Offer Marquee */}

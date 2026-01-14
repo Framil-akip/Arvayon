@@ -73,7 +73,7 @@ const Hero = () => {
                 <h1 className="text-2xl md:text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight animate-fade-in-up uppercase whitespace-nowrap">
                     DESIGN BEYOND IMAGINATION
                 </h1>
-                <p className="text-gray-200 text-lg md:text-xl lg:text-2xl mb-8 max-w-3xl mx-auto animate-fade-in-up delay-200">
+                <p className="text-gray-250 text-lg md:text-xl lg:text-2xl mb-8 max-w-3xl mx-auto animate-fade-in-up delay-200">
                     From concept planning to project execution we deliver quality-driven and cost effective building services
                 </p>
                 <div className="text-[#D4B878] text-base md:text-xl font-bold uppercase tracking-wider animate-fade-in-up delay-400">
