@@ -1,4 +1,4 @@
-import logo from '../assets/arvayon-logo-v3.png';
+import logo from '../assets/logo-full.png';
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import MobileBottomNav from './MobileBottomNav';
@@ -24,7 +24,7 @@ const Navbar = () => {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex items-center justify-between h-20">
                         <div className="flex-shrink-0 flex items-center">
-                            <Link to="/" className="mt-0 mb-4">
+                            <Link to="/" className="mt-4 mb-4">
                                 <img src={logo} alt="ARVAYON Pro Build Studio" className="h-[11rem] w-auto object-contain transform scale-150" />
                             </Link>
 
