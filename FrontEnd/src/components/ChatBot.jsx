@@ -1,11 +1,171 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const ChatBot = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const [messages, setMessages] = useState([
+        { type: 'bot', text: 'Hello! How can I assist you with your project today?', cta: null }
+    ]);
+    const [inputValue, setInputValue] = useState("");
+    const messagesEndRef = useRef(null);
+    const navigate = useNavigate();
+
+    const scrollToBottom = () => {
+        messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    };
+
+    useEffect(() => {
+        scrollToBottom();
+    }, [messages, isOpen]);
+
+    const faqData = [
+        {
+            id: 1,
+            question: "What is Project Management Consultancy (PMC)?",
+            answer: "PMC represents the client and manages cost, quality, timelines, and coordination throughout the construction project.",
+            cta: "Know More"
+        },
+        {
+            id: 2,
+            question: "How is PMC different from a contractor?",
+            answer: "A contractor executes the work, while a PMC manages and controls the project in the client’s best interest.",
+            cta: "Know More"
+        },
+        {
+            id: 3,
+            question: "Will PMC reduce my construction cost?",
+            answer: "Yes. PMC optimizes cost by eliminating contractor margins, controlling wastage, and managing materials efficiently.",
+            cta: "Know More"
+        },
+        {
+            id: 4,
+            question: "How does PMC charge its fees?",
+            answer: "Fees are fixed or percentage-based and defined clearly in advance with full transparency.",
+            cta: "Know More"
+        },
+        {
+            id: 5,
+            question: "Who handles material procurement?",
+            answer: "Materials are purchased directly in the client’s name with PMC support for quality and cost control.",
+            cta: "Know More"
+        },
+        {
+            id: 6,
+            question: "How do you ensure construction quality?",
+            answer: "Through stage-wise inspections, checklist based monitoring, and strict drawing compliance.",
+            cta: "Know More"
+        },
+        {
+            id: 7,
+            question: "How do you control project delays?",
+            answer: "By detailed scheduling, contractor coordination, and regular progress monitoring.",
+            cta: "Know More"
+        },
+        {
+            id: 8,
+            question: "Will my budget increase during construction?",
+            answer: "No changes are made without prior client approval. Costs are tracked transparently.",
+            cta: "Know More"
+        },
+        {
+            id: 9,
+            question: "Is PMC suitable for small residential projects?",
+            answer: "Yes. PMC is suitable for houses, villas, and commercial projects of all sizes.",
+            cta: "Know More"
+        },
+        {
+            id: 10,
+            question: "Can PMC manage ongoing projects?",
+            answer: "Yes. PMC can take over ongoing projects and implement corrective controls.",
+            cta: "Know More"
+        }
+    ];
+
+    const generateAIResponse = (text) => {
+        const lowerText = text.toLowerCase();
+
+        if (['hi', 'hello', 'hey', 'greetings', 'morning', 'afternoon', 'evening'].some(word => lowerText.includes(word))) {
+            return {
+                text: "Hello! Welcome to Arvayon Pro Build Studio. How can I help you with your construction needs today?",
+                cta: null
+            };
+        }
+
+        if (['bye', 'goodbye', 'see you', 'later'].some(word => lowerText.includes(word))) {
+            return {
+                text: "Goodbye! Feel free to reach out anytime. Have a great day!",
+                cta: null
+            };
+        }
+
+        if (['thanks', 'thank you', 'thx', 'thank'].some(word => lowerText.includes(word))) {
+            return {
+                text: "You're welcome! Let me know if you have any other questions.",
+                cta: null
+            };
+        }
+
+        if (['help', 'assist', 'support'].some(word => lowerText.includes(word))) {
+            return {
+                text: "I can help you understand our PMC services, Architectural Design, and more. Please select a question below or type your query.",
+                cta: null
+            };
+        }
+
+        return {
+            text: "I'm still learning! You can select a question from the list below, or for specific inquiries, please contact us directly.",
+            cta: "Contact Us"
+        };
+    };
+
+    const handleSendMessage = (e) => {
+        e.preventDefault();
+        if (!inputValue.trim()) return;
+
+        // Add User Message
+        const userMsg = { type: 'user', text: inputValue };
+        setMessages(prev => [...prev, userMsg]);
+        const currentInput = inputValue;
+        setInputValue("");
+
+        // Generate and Add Bot Response
+        setTimeout(() => {
+            const response = generateAIResponse(currentInput);
+            const botMsg = {
+                type: 'bot',
+                text: response.text,
+                cta: response.cta,
+                link: '/contact'
+            };
+            setMessages(prev => [...prev, botMsg]);
+        }, 600);
+    };
+
+    const handleQuestionClick = (faq) => {
+        // Add User Message
+        const userMsg = { type: 'user', text: faq.question };
+        setMessages(prev => [...prev, userMsg]);
+
+        // Simulate typing delay then add Bot Message
+        setTimeout(() => {
+            const botMsg = {
+                type: 'bot',
+                text: faq.answer,
+                cta: faq.cta,
+                link: '/contact' // Redirect to contact for more info
+            };
+            setMessages(prev => [...prev, botMsg]);
+        }, 500);
+    };
+
+    const handleCTAClick = () => {
+        setIsOpen(false);
+        navigate('/contact');
+    };
 
     return (
-        <div className="fixed  bottom-20 md:bottom-1 right-0 md:right-0 z-50 flex flex-col items-end">
-            <div className="fixed top-[50%] md:top-1/2 -translate-y-1/2 right-0 md:right-0 flex flex-col items-end gap-2 md:gap-3 rounded-2xl md:rounded-lg px-0 py-1.5 md:px-2 md:py-2 text-white">
+        <div className="fixed bottom-20 md:bottom-1 right-0 md:right-0 z-50 flex flex-col items-end pointer-events-none">
+            <div className="fixed top-[50%] md:top-1/2 -translate-y-1/2 right-0 md:right-0 flex flex-col items-end gap-2 md:gap-3 px-0 py-1.5 md:px-2 md:py-2 pointer-events-auto">
                 <a
                     href="https://wa.me/919363035048?text=Hi%20Arvayon%2C%20I%27d%20like%20a%20free%20estimate."
                     target="_blank"
@@ -46,15 +206,15 @@ const ChatBot = () => {
 
             {/* Pop-up Message Bubble */}
             {!isOpen && (
-                <div className="mb-2 bg-white text-primary px-1 py-2 rounded-xl rounded-br-none shadow-xl transform transition-all duration-300 animate-bounce">
+                <div className="mb-2 bg-white text-primary px-1 py-2 rounded-xl rounded-br-none shadow-xl transform transition-all duration-300 animate-bounce mr-2 pointer-events-auto">
                     <p className="font-bold text-sm whitespace-nowrap">May I help you !!!!</p>
                 </div>
             )}
 
-            {/* Chat Window (Mockup) */}
+            {/* Chat Window */}
             {isOpen && (
-                <div className="mb-4 w-80 bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden transform transition-all duration-300 origin-bottom-right">
-                    <div className="bg-primary p-4 flex justify-between items-center">
+                <div className="mb-4 mr-2 w-80 md:w-96 bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden transform transition-all duration-300 origin-bottom-right pointer-events-auto flex flex-col max-h-[500px]">
+                    <div className="bg-primary p-4 flex justify-between items-center shrink-0">
                         <div className="flex items-center space-x-3">
                             <div className="w-8 h-8 rounded-full bg-accent flex items-center justify-center text-primary font-bold text-xs">
                                 AI
@@ -70,36 +230,70 @@ const ChatBot = () => {
                             </svg>
                         </button>
                     </div>
-                    <div className="h-64 bg-gray-50 p-4 overflow-y-auto">
-                        <div className="flex justify-start mb-4">
-                            <div className="bg-gray-200 text-gray-800 rounded-lg rounded-tl-none py-2 px-3 text-sm max-w-[80%]">
-                                Hello! How can I assist you with your project today?
+
+                    {/* Messages Area */}
+                    <div className="flex-1 bg-gray-50 p-4 overflow-y-auto min-h-[300px]">
+                        {messages.map((msg, index) => (
+                            <div key={index} className={`flex ${msg.type === 'user' ? 'justify-end' : 'justify-start'} mb-4`}>
+                                <div
+                                    className={`rounded-lg py-2 px-3 text-sm max-w-[85%] ${msg.type === 'user'
+                                            ? 'bg-[#D4B878] text-white rounded-tr-none'
+                                            : 'bg-gray-200 text-gray-800 rounded-tl-none'
+                                        }`}
+                                >
+                                    <p>{msg.text}</p>
+                                    {msg.cta && (
+                                        <button
+                                            onClick={handleCTAClick}
+                                            className="mt-2 text-xs font-bold uppercase tracking-wider text-primary border-b border-primary/20 pb-0.5 hover:text-[#D4B878] transition-colors"
+                                        >
+                                            {msg.cta} →
+                                        </button>
+                                    )}
+                                </div>
                             </div>
-                        </div>
+                        ))}
+                        <div ref={messagesEndRef} />
                     </div>
+
+                    {/* FAQ Chips Area */}
                     <div className="p-3 border-t border-gray-100 bg-white">
-                        <div className="flex items-center bg-gray-100 rounded-full px-4 py-2">
+                        <p className="text-xs font-bold text-gray-400 mb-2 uppercase tracking-wider text-left">Suggested Questions</p>
+                        <div className="flex flex-wrap gap-2 max-h-32 overflow-y-auto mb-3">
+                            {faqData.map((faq) => (
+                                <button
+                                    key={faq.id}
+                                    onClick={() => handleQuestionClick(faq)}
+                                    className="text-left bg-gray-100 hover:bg-[#D4B878] hover:text-white text-gray-700 text-xs py-1.5 px-3 rounded-full transition-all duration-200 border border-gray-200"
+                                >
+                                    {faq.question}
+                                </button>
+                            ))}
+                        </div>
+
+                        {/* Input Area */}
+                        <form onSubmit={handleSendMessage} className="flex items-center bg-gray-100 rounded-full px-4 py-2">
                             <input
                                 type="text"
                                 placeholder="Type a message..."
                                 className="bg-transparent flex-1 text-sm outline-none text-gray-700"
-                                disabled
+                                value={inputValue}
+                                onChange={(e) => setInputValue(e.target.value)}
                             />
-                            <button className="text-primary opacity-50 cursor-not-allowed">
-                                <svg className="w-5 h-5 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <button type="submit" className={`text-primary ${!inputValue.trim() ? 'opacity-50 cursor-not-allowed' : 'hover:text-[#D4B878]'}`}>
+                                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
                                 </svg>
                             </button>
-                        </div>
+                        </form>
                     </div>
                 </div>
             )}
 
             {/* Toggle Button */}
-            {/* Toggle Button */}
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-primary flex items-center justify-center shadow-[0_2px_12px_rgba(0,0,0,0.45)] transform transition-transform duration-300 hover:scale-110 focus:outline-none"
+                className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-primary flex items-center justify-center shadow-[0_2px_12px_rgba(0,0,0,0.45)] transform transition-transform duration-300 hover:scale-110 focus:outline-none pointer-events-auto mr-2 md:mr-0"
             >
                 {isOpen ? (
                     <svg className="w-6 h-6 text-[#D4B878]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
