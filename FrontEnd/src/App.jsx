@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import Home from './pages/Home';
 import ServiceDetail from './pages/ServiceDetail';
 import AboutPage from './pages/AboutPage';
@@ -28,15 +29,17 @@ const MainLayout = () => {
 
 function App() {
   return (
-    <Router>
-      <ScrollToTop />
-      <ChatBot />
-      <Routes>
-        <Route path="/profile/:id" element={<EmployeeCard />} />
+    <HelmetProvider>
+      <Router>
+        <ScrollToTop />
+        <ChatBot />
+        <Routes>
+          <Route path="/profile/:id" element={<EmployeeCard />} />
 
-        <Route path="/*" element={<MainLayout />} />
-      </Routes>
-    </Router>
+          <Route path="/*" element={<MainLayout />} />
+        </Routes>
+      </Router>
+    </HelmetProvider>
   );
 }
 

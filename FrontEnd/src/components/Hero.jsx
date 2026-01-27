@@ -41,8 +41,9 @@ const Hero = () => {
                 >
                     <img
                         src={img}
-                        alt={`Hero Background ${index + 1}`}
+                        alt={`Hero Background showing ${index === 0 ? 'Project Planning' : index === 1 ? 'Interior Design' : 'Construction Site'} - Arvayon Pro Build Studio`}
                         className="w-full h-full object-cover"
+                        loading={index === 0 ? "eager" : "lazy"}
                     />
                     <div className="absolute inset-0 bg-black/60"></div>
                 </div>

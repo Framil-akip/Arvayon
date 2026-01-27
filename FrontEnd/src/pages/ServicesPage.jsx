@@ -3,9 +3,16 @@ import Navbar from '../components/Navbar';
 import Services from '../components/Services';
 import Footer from '../components/Footer';
 
+import SEO from '../components/SEO';
+
 const ServicesPage = () => {
     return (
         <div className="bg-primary min-h-screen text-white">
+            <SEO
+                title="Our Services | Project Management Consultancy | Civil Works | Nagercoil"
+                description="Comprehensive construction services including Project Management Consultancy (PMC), Architectural Design, Structural Engineering, and Turnkey Civil Contracts."
+                url="/services"
+            />
             <Navbar />
             <div className="pt-24">
                 <Services />
