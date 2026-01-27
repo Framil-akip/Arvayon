@@ -22,7 +22,7 @@ const Home = () => {
                 keywords="Construction Company Nagercoil, Civil Contractors Nagercoil, PMC Services, Arvayon Pro Build Studio, Best Builders Nagercoil, Architectural Design, Structural Design"
             />
             <Navbar />
-            <div className="pt-20">
+            <main className="pt-20">
                 <Hero />
                 <About />
 
@@ -32,7 +32,7 @@ const Home = () => {
                 <Portfolio />
                 <Contact />
 
-            </div>
+            </main>
         </div>
     );
 };
