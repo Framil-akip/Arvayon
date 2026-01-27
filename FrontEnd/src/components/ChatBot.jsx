@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { knowledgeBase, fallbackResponses, faqData } from '../data/chatbotContent';
+import { getBotResponse } from '../utils/chatbotLogic';
 
 const ChatBot = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -18,105 +20,8 @@ const ChatBot = () => {
         scrollToBottom();
     }, [messages, isOpen]);
 
-    const faqData = [
-        {
-            id: 1,
-            question: "What is Project Management Consultancy (PMC)?",
-            answer: "PMC represents the client and manages cost, quality, timelines, and coordination throughout the construction project.",
-            cta: "Know More"
-        },
-        {
-            id: 2,
-            question: "How is PMC different from a contractor?",
-            answer: "A contractor executes the work, while a PMC manages and controls the project in the client’s best interest.",
-            cta: "Know More"
-        },
-        {
-            id: 3,
-            question: "Will PMC reduce my construction cost?",
-            answer: "Yes. PMC optimizes cost by eliminating contractor margins, controlling wastage, and managing materials efficiently.",
-            cta: "Know More"
-        },
-        {
-            id: 4,
-            question: "How does PMC charge its fees?",
-            answer: "Fees are fixed or percentage-based and defined clearly in advance with full transparency.",
-            cta: "Know More"
-        },
-        {
-            id: 5,
-            question: "Who handles material procurement?",
-            answer: "Materials are purchased directly in the client’s name with PMC support for quality and cost control.",
-            cta: "Know More"
-        },
-        {
-            id: 6,
-            question: "How do you ensure construction quality?",
-            answer: "Through stage-wise inspections, checklist based monitoring, and strict drawing compliance.",
-            cta: "Know More"
-        },
-        {
-            id: 7,
-            question: "How do you control project delays?",
-            answer: "By detailed scheduling, contractor coordination, and regular progress monitoring.",
-            cta: "Know More"
-        },
-        {
-            id: 8,
-            question: "Will my budget increase during construction?",
-            answer: "No changes are made without prior client approval. Costs are tracked transparently.",
-            cta: "Know More"
-        },
-        {
-            id: 9,
-            question: "Is PMC suitable for small residential projects?",
-            answer: "Yes. PMC is suitable for houses, villas, and commercial projects of all sizes.",
-            cta: "Know More"
-        },
-        {
-            id: 10,
-            question: "Can PMC manage ongoing projects?",
-            answer: "Yes. PMC can take over ongoing projects and implement corrective controls.",
-            cta: "Know More"
-        }
-    ];
-
-    const generateAIResponse = (text) => {
-        const lowerText = text.toLowerCase();
-
-        if (['hi', 'hello', 'hey', 'greetings', 'morning', 'afternoon', 'evening'].some(word => lowerText.includes(word))) {
-            return {
-                text: "Hello! Welcome to Arvayon Pro Build Studio. How can I help you with your construction needs today?",
-                cta: null
-            };
-        }
-
-        if (['bye', 'goodbye', 'see you', 'later'].some(word => lowerText.includes(word))) {
-            return {
-                text: "Goodbye! Feel free to reach out anytime. Have a great day!",
-                cta: null
-            };
-        }
-
-        if (['thanks', 'thank you', 'thx', 'thank'].some(word => lowerText.includes(word))) {
-            return {
-                text: "You're welcome! Let me know if you have any other questions.",
-                cta: null
-            };
-        }
-
-        if (['help', 'assist', 'support'].some(word => lowerText.includes(word))) {
-            return {
-                text: "I can help you understand our PMC services, Architectural Design, and more. Please select a question below or type your query.",
-                cta: null
-            };
-        }
-
-        return {
-            text: "I'm still learning! You can select a question from the list below, or for specific inquiries, please contact us directly.",
-            cta: "Contact Us"
-        };
-    };
+    // Use the original FAQs for the chips
+    const suggestedQuestions = faqData;
 
     const handleSendMessage = (e) => {
         e.preventDefault();
@@ -130,7 +35,7 @@ const ChatBot = () => {
 
         // Generate and Add Bot Response
         setTimeout(() => {
-            const response = generateAIResponse(currentInput);
+            const response = getBotResponse(currentInput, knowledgeBase, fallbackResponses);
             const botMsg = {
                 type: 'bot',
                 text: response.text,
@@ -141,18 +46,23 @@ const ChatBot = () => {
         }, 600);
     };
 
-    const handleQuestionClick = (faq) => {
+    const handleQuestionClick = (question) => {
         // Add User Message
-        const userMsg = { type: 'user', text: faq.question };
+        const userMsg = { type: 'user', text: question.question };
         setMessages(prev => [...prev, userMsg]);
 
         // Simulate typing delay then add Bot Message
         setTimeout(() => {
+            // We can treat the question text itself as input to our bot logic
+            // or we could map it directly if we had the answer in the suggestedQuestions array.
+            // Using the bot logic ensures consistency.
+            const response = getBotResponse(question.question, knowledgeBase, fallbackResponses);
+
             const botMsg = {
                 type: 'bot',
-                text: faq.answer,
-                cta: faq.cta,
-                link: '/contact' // Redirect to contact for more info
+                text: response.text,
+                cta: response.cta,
+                link: '/contact'
             };
             setMessages(prev => [...prev, botMsg]);
         }, 500);
@@ -237,8 +147,8 @@ const ChatBot = () => {
                             <div key={index} className={`flex ${msg.type === 'user' ? 'justify-end' : 'justify-start'} mb-4`}>
                                 <div
                                     className={`rounded-lg py-2 px-3 text-sm max-w-[85%] ${msg.type === 'user'
-                                            ? 'bg-[#D4B878] text-white rounded-tr-none'
-                                            : 'bg-gray-200 text-gray-800 rounded-tl-none'
+                                        ? 'bg-[#D4B878] text-white rounded-tr-none'
+                                        : 'bg-gray-200 text-gray-800 rounded-tl-none'
                                         }`}
                                 >
                                     <p>{msg.text}</p>
@@ -260,13 +170,13 @@ const ChatBot = () => {
                     <div className="p-3 border-t border-gray-100 bg-white">
                         <p className="text-xs font-bold text-gray-400 mb-2 uppercase tracking-wider text-left">Suggested Questions</p>
                         <div className="flex flex-wrap gap-2 max-h-32 overflow-y-auto mb-3">
-                            {faqData.map((faq) => (
+                            {suggestedQuestions.map((q) => (
                                 <button
-                                    key={faq.id}
-                                    onClick={() => handleQuestionClick(faq)}
+                                    key={q.id}
+                                    onClick={() => handleQuestionClick(q)}
                                     className="text-left bg-gray-100 hover:bg-[#D4B878] hover:text-white text-gray-700 text-xs py-1.5 px-3 rounded-full transition-all duration-200 border border-gray-200"
                                 >
-                                    {faq.question}
+                                    {q.question}
                                 </button>
                             ))}
                         </div>

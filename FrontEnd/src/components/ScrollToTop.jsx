@@ -1,8 +1,9 @@
 import { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigationType } from 'react-router-dom';
 
 const ScrollToTop = () => {
     const { pathname, hash } = useLocation();
+    const navType = useNavigationType();
 
     useEffect(() => {
         if (hash) {
@@ -13,10 +14,10 @@ const ScrollToTop = () => {
                     element.scrollIntoView({ behavior: 'auto' });
                 }
             }, 100);
-        } else {
+        } else if (navType !== 'POP') {
             window.scrollTo(0, 0);
         }
-    }, [pathname, hash]);
+    }, [pathname, hash, navType]);
 
     return null;
 };
