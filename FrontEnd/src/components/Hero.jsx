@@ -76,7 +76,7 @@ const Hero = () => {
                 <p className="text-gray-250 text-lg md:text-xl lg:text-2xl mb-8 max-w-5xl mx-auto animate-fade-in-up delay-200">
                     From concept planning to disciplined project execution, we deliver transparent, <br /> quality-driven building solutions through structured PMC systems.
                 </p>
-                <div className="text-[#D4B878] text-base md:text-xl font-bold uppercase tracking-wider animate-fade-in-up delay-400">
+                <div className="text-[#D4B878] text-base md:text-xl font-bold uppercase tracking-wider animate-fade-in-up delay-400 md:whitespace-nowrap">
                     PROJECT MANAGEMENT CONSULTANCY (PMC) || Architectural Design || Structural Design
                 </div>
             </div>
