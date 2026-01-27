@@ -30,8 +30,8 @@ const PMCServices = () => {
                 setIsButtonVisible(entry.isIntersecting);
             },
             {
-                threshold: 0.15,
-                rootMargin: "-150px 0px -150px 0px"
+                threshold: 0.05,
+                rootMargin: "-5% 0px -5% 0px"
             }
         );
 
@@ -125,8 +125,8 @@ const PMCServices = () => {
 
     return (
         <section ref={sectionRef} className="section-padding bg-white relative overflow-hidden" id="pmc">
-            {/* Background elements */}
-            <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-[#FDFBF7] to-transparent"></div>
+            {/* Background elements - reduced top gap for section-padding sync */}
+            <div className="absolute top-0 left-0 w-full h-12 bg-gradient-to-b from-[#FDFBF7] to-transparent"></div>
 
             <div className="max-w-7xl mx-auto px-4 relative z-10">
                 {/* Hero Header Section */}
@@ -142,11 +142,11 @@ const PMCServices = () => {
                     </div>
                 </div>
 
-                {/* Fixed Bottom Button */}
-                <div className={`fixed top-20 md:top-auto md:bottom-8 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300 ${isButtonVisible ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 translate-y-10 pointer-events-none'}`}>
+                {/* Fixed Button - Positioned at top for mobile, bottom for desktop */}
+                <div className={`fixed top-24 md:top-auto md:bottom-8 left-1/2 transform -translate-x-1/2 z-[100] transition-all duration-300 ${isButtonVisible ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 translate-y-10 pointer-events-none'} w-max`}>
                     <a
                         href="/#book-consultation"
-                        className="px-3 py-4 bg-gray-900 text-white font-bold uppercase tracking-widest hover:bg-[#D4B878] transition-all duration-300 hover:-translate-y-1 shadow-2xl border border-white/20 rounded-full flex items-center justify-center text-center"
+                        className="px-6 py-2 md:px-10 md:py-4 bg-gray-900 text-white text-[10px] md:text-sm font-black uppercase tracking-[0.2em] hover:bg-[#D4B878] transition-all duration-300 hover:-translate-y-1 shadow-2xl border border-white/20 rounded-full flex items-center justify-center text-center whitespace-nowrap"
                     >
                         Book PMC Consultation
                     </a>

@@ -14,7 +14,7 @@ const ContactPage = () => {
                 url="/contact"
             />
             <Navbar />
-            <div className="pt-24">
+            <div className="pt-20 md:pt-24">
                 <Contact />
             </div>
 

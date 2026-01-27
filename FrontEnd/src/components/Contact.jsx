@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaPhone, FaEnvelope, FaInstagram, FaFacebookF, FaLinkedinIn, FaPinterestP, FaMapMarkerAlt } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 
 const Contact = () => {
@@ -144,8 +145,8 @@ const Contact = () => {
                             &copy; {new Date().getFullYear()} Arvayon Pro Build Studio. All rights reserved.
                         </p>
                         <div className="flex space-x-6 text-sm text-black font-medium">
-                            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-                            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+                            <Link to="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
+                            <Link to="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
                         </div>
                     </div>
                 </div>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { knowledgeBase, fallbackResponses, faqData } from '../data/chatbotContent';
 import { getBotResponse } from '../utils/chatbotLogic';
 
@@ -103,12 +103,12 @@ const ChatBot = () => {
 
                 {/* Free Estimate Button - Vertical on all screens */}
                 <div className="mt-20 md:mt-0 mr-1 md:mr-0 origin-center transform -rotate-90 md:rotate-0 translate-x-[40%] md:translate-x-0">
-                    <a
-                        href="/#book-consultation"
+                    <Link
+                        to="/#book-consultation"
                         className="block bg-[#D4B878] text-primary font-bold rounded-md shadow-lg border border-primary/20 px-3 py-1.5 text-[10px] text-center hover:scale-105 transform transition-all duration-300 whitespace-nowrap uppercase tracking-wider"
                     >
                         Free Estimate
-                    </a>
+                    </Link>
                 </div>
             </div>
 

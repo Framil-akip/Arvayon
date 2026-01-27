@@ -10,11 +10,11 @@ const Navbar = () => {
     const isHomePage = location.pathname === '/';
 
     const navLinks = [
-        { name: 'Home', href: 'home' },
-        { name: 'About', href: 'about' },
-        { name: 'Services', href: 'pmc' },
-        { name: 'Projects', href: 'portfolio' },
-        { name: 'Contact', href: 'contact' },
+        { name: 'Home', href: 'home', path: '/' },
+        { name: 'About', href: 'about', path: '/about' },
+        { name: 'Services', href: 'pmc', path: '/#pmc' },
+        { name: 'Projects', href: 'portfolio', path: '/portfolio' },
+        { name: 'Contact', href: 'contact', path: '/contact' },
     ];
 
 
@@ -55,7 +55,7 @@ const Navbar = () => {
                                     return (
                                         <Link
                                             key={link.name}
-                                            to={isHomeLink ? '/' : `/#${link.href}`}
+                                            to={link.path}
                                             className="text-gray-300 hover:text-[#D4B878] px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300 uppercase tracking-wide cursor-pointer"
                                         >
                                             {link.name}
@@ -95,7 +95,7 @@ const Navbar = () => {
                                 return (
                                     <Link
                                         key={link.name}
-                                        to={isHomeLink ? '/' : `/#${link.href}`}
+                                        to={link.path}
                                         className="text-gray-300 hover:text-[#D4B878] block px-3 py-2 rounded-md text-base font-medium uppercase"
                                         onClick={() => setIsOpen(false)}
                                     >

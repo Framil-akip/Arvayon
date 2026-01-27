@@ -7,6 +7,8 @@ import ServicesPage from './pages/ServicesPage';
 import PortfolioPage from './pages/PortfolioPage';
 import ContactPage from './pages/ContactPage';
 import EmployeeCard from './pages/EmployeeCard';
+import PrivacyPage from './pages/PrivacyPage';
+import TermsPage from './pages/TermsPage';
 import BottomNav from './components/BottomNav';
 import ScrollToTop from './components/ScrollToTop';
 import ChatBot from './components/ChatBot';
@@ -21,6 +23,8 @@ const MainLayout = () => {
         <Route path="/services/:id" element={<ServiceDetail />} />
         <Route path="/portfolio" element={<PortfolioPage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/privacy" element={<PrivacyPage />} />
+        <Route path="/terms" element={<TermsPage />} />
       </Routes>
       <BottomNav />
     </div>

@@ -70,15 +70,15 @@ const Hero = () => {
             </button>
 
             {/* Content */}
-            <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
-                <h1 className="text-2xl md:text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight animate-fade-in-up uppercase whitespace-nowrap">
+            <div className="relative z-10 text-center px-6 md:px-8 max-w-5xl mx-auto overflow-x-hidden">
+                <h1 className="text-xl sm:text-2xl md:text-5xl lg:text-7xl font-bold text-white mb-4 leading-tight animate-fade-in-up uppercase whitespace-nowrap">
                     DESIGN BEYOND IMAGINATION
                 </h1>
-                <p className="text-gray-250 text-lg md:text-xl lg:text-2xl mb-8 max-w-5xl mx-auto animate-fade-in-up delay-200">
-                    From concept planning to disciplined project execution, we deliver transparent, <br /> quality-driven building solutions through structured PMC systems.
+                <p className="text-gray-250 text-base md:text-xl lg:text-2xl mb-8 max-w-5xl mx-auto animate-fade-in-up delay-200">
+                    From concept planning to disciplined project execution, we deliver transparent, quality-driven building solutions through structured PMC systems.
                 </p>
-                <div className="text-[#D4B878] text-base md:text-xl font-bold uppercase tracking-wider animate-fade-in-up delay-400 md:whitespace-nowrap">
-                    PROJECT MANAGEMENT CONSULTANCY (PMC) || Architectural Design || Structural Design
+                <div className="text-[#D4B878] text-[10px] sm:text-sm md:text-xl font-bold uppercase tracking-[0.2em] animate-fade-in-up delay-400 md:whitespace-nowrap">
+                    PROJECT MANAGEMENT CONSULTANCY (PMC) <span className="hidden sm:inline">||</span> <br className="sm:hidden" /> Architectural Design <span className="hidden sm:inline">||</span> <br className="sm:hidden" /> Structural Design
                 </div>
             </div>
         </section >
