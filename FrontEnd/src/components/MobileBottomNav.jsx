@@ -31,9 +31,9 @@ const MobileBottomNav = ({ onMenuClick }) => {
                 <button
                     onClick={() => {
                         if (location.pathname !== '/') {
-                            window.location.href = '/#services';
+                            window.location.href = '/#pmc';
                         } else {
-                            const element = document.getElementById('services');
+                            const element = document.getElementById('pmc');
                             if (element) element.scrollIntoView({ behavior: 'auto' });
                         }
                     }}
