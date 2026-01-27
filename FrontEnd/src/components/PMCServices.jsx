@@ -145,7 +145,7 @@ const PMCServices = () => {
                 {/* Fixed Bottom Button */}
                 <div className={`fixed top-20 md:top-auto md:bottom-8 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300 ${isButtonVisible ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 translate-y-10 pointer-events-none'}`}>
                     <a
-                        href="/contact#book-consultation"
+                        href="/#book-consultation"
                         className="px-3 py-4 bg-gray-900 text-white font-bold uppercase tracking-widest hover:bg-[#D4B878] transition-all duration-300 hover:-translate-y-1 shadow-2xl border border-white/20 rounded-full inline-block"
                     >
                         Book PMC Consultation
