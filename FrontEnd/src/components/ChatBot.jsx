@@ -168,7 +168,7 @@ const ChatBot = () => {
 
                     {/* FAQ Chips Area */}
                     <div className="p-3 border-t border-gray-100 bg-white">
-                        <p className="text-xs font-bold text-gray-400 mb-2 uppercase tracking-wider text-left">Suggested Questions</p>
+                        <p className="text-xs font-bold text-gray-500 mb-2 uppercase tracking-wider text-left">Suggested Questions</p>
                         <div className="flex flex-wrap gap-2 max-h-32 overflow-y-auto mb-3">
                             {suggestedQuestions.map((q) => (
                                 <button

@@ -26,7 +26,7 @@ const Contact = () => {
                                         <FaPhone size={16} />
                                     </div>
                                     <div>
-                                        <h4 className="text-lg font-bold text-gray-800 mb-0">Phone</h4>
+                                        <h3 className="text-lg font-bold text-gray-800 mb-0">Phone</h3>
                                         <p className="text-gray-600 text-sm">+91 93630 35048</p>
                                     </div>
                                 </div>
@@ -37,7 +37,7 @@ const Contact = () => {
                                         <FaEnvelope size={16} />
                                     </div>
                                     <div>
-                                        <h4 className="text-lg font-bold text-gray-800 mb-0">Email</h4>
+                                        <h3 className="text-lg font-bold text-gray-800 mb-0">Email</h3>
                                         <p className="text-gray-600 text-sm">admin@arvayonpbs.com</p>
                                     </div>
                                 </div>
@@ -53,7 +53,7 @@ const Contact = () => {
                                         <FaMapMarkerAlt size={16} />
                                     </a>
                                     <div>
-                                        <h4 className="text-lg font-bold text-gray-800 mb-0">Location</h4>
+                                        <h3 className="text-lg font-bold text-gray-800 mb-0">Location</h3>
                                         <a
                                             href="https://www.google.com/maps/search/?api=1&query=Arvayon+Pro+Build+Studio+Ramanpudur+Nagercoil"
                                             target="_blank"
@@ -66,7 +66,7 @@ const Contact = () => {
                                 </div>
 
                                 <div className="pt-4 border-t border-gray-200">
-                                    <h4 className="text-lg font-bold text-gray-800 mb-3">Follow Us</h4>
+                                    <h3 className="text-lg font-bold text-gray-800 mb-3">Follow Us</h3>
                                     <div className="flex space-x-3">
                                         <a href="#" aria-label="Instagram" className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-[#D4B878] hover:bg-[#D4B878] hover:text-primary transition-all duration-300 border border-white/5 shadow-md group">
                                             <FaInstagram size={16} />
@@ -91,7 +91,7 @@ const Contact = () => {
                             <form className="space-y-6">
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                     <div>
-                                        <label htmlFor="name" className="block text-xs font-medium text-gray-400 mb-1">Name</label>
+                                        <label htmlFor="name" className="block text-xs font-medium text-gray-300 mb-1">Name</label>
                                         <input
                                             type="text"
                                             id="name"
@@ -100,7 +100,7 @@ const Contact = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label htmlFor="phone" className="block text-xs font-medium text-gray-400 mb-1">Phone</label>
+                                        <label htmlFor="phone" className="block text-xs font-medium text-gray-300 mb-1">Phone</label>
                                         <input
                                             type="tel"
                                             id="phone"
@@ -110,7 +110,7 @@ const Contact = () => {
                                     </div>
                                 </div>
                                 <div>
-                                    <label htmlFor="email" className="block text-xs font-medium text-gray-400 mb-1">Email</label>
+                                    <label htmlFor="email" className="block text-xs font-medium text-gray-300 mb-1">Email</label>
                                     <input
                                         type="email"
                                         id="email"
@@ -119,7 +119,7 @@ const Contact = () => {
                                     />
                                 </div>
                                 <div>
-                                    <label htmlFor="message" className="block text-xs font-medium text-gray-400 mb-1">Message</label>
+                                    <label htmlFor="message" className="block text-xs font-medium text-gray-300 mb-1">Message</label>
                                     <textarea
                                         id="message"
                                         rows="3"

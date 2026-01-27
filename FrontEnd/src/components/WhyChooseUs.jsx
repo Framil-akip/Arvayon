@@ -45,7 +45,7 @@ const WhyChooseUs = () => {
                                         <h3 className="text-xl font-bold text-white mb-2 group-hover:text-accent transition-colors duration-300">
                                             {benefit.title}
                                         </h3>
-                                        <p className="text-gray-400 leading-relaxed">
+                                        <p className="text-gray-300 leading-relaxed">
                                             {benefit.description}
                                         </p>
                                     </div>
@@ -88,7 +88,7 @@ const WhyChooseUs = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <p className="text-gray-500 text-sm mt-8 text-center italic">
+                                <p className="text-gray-300 text-sm mt-8 text-center italic">
                                     "Driven by passion, defined by quality."
                                 </p>
                             </div>

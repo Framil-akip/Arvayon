@@ -68,7 +68,7 @@ const Packages = () => {
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Packages</h2>
                     <div className="w-20 h-1 bg-accent mx-auto mb-6"></div>
-                    <p className="text-gray-400">Choose the best plan for your dream project</p>
+                    <p className="text-gray-300">Choose the best plan for your dream project</p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -90,9 +90,9 @@ const Packages = () => {
                                 <h3 className="text-2xl font-bold text-white mb-2">{pkg.name}</h3>
                                 <div className="flex justify-center items-baseline mb-2">
                                     <span className="text-4xl font-bold text-accent">{pkg.price}</span>
-                                    <span className="text-gray-400 ml-1">{pkg.unit}</span>
+                                    <span className="text-gray-300 ml-1">{pkg.unit}</span>
                                 </div>
-                                <p className="text-sm text-gray-400">Delivered within {pkg.delivery}</p>
+                                <p className="text-sm text-gray-300">Delivered within {pkg.delivery}</p>
                             </div>
 
                             <div className="p-8">
