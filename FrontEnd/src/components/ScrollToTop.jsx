@@ -11,7 +11,7 @@ const ScrollToTop = () => {
             const scrollToElement = (attempt = 0) => {
                 const element = document.getElementById(id);
                 if (element) {
-                    element.scrollIntoView({ behavior: 'smooth' });
+                    element.scrollIntoView({ behavior: 'auto' });
                 } else if (attempt < 5) {
                     setTimeout(() => scrollToElement(attempt + 1), 200);
                 }
