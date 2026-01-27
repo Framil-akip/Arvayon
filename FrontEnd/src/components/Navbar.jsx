@@ -25,7 +25,7 @@ const Navbar = () => {
                     <div className="flex items-center justify-between h-20">
                         <div className="flex-shrink-0 flex items-center">
                             <Link to="/" className="flex items-center">
-                                <img src={logo} alt="ARVAYON Pro Build Studio" className="h-16 w-auto object-contain" />
+                                <img src={logo} alt="ARVAYON Pro Build Studio" className="h-10 w-auto object-contain" />
                             </Link>
 
                         </div>
