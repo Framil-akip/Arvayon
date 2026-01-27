@@ -14,7 +14,7 @@ const AboutPage = () => {
                 url="/about"
             />
             <Navbar />
-            <div className="pt-20 md:pt-24">
+            <div className="pt-16 md:pt-24">
                 <About />
             </div>
             <Footer />

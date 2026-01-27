@@ -59,7 +59,7 @@ const MobileBottomNav = ({ onMenuClick }) => {
                             {/* The Crisp White Ring - Increased Width Outwards */}
                             <div className="absolute inset-[-1px] rounded-full border-2 border-white pointer-events-none"></div>
 
-                            <div className="w-[58px] h-[58px] rounded-full overflow-hidden flex items-center justify-center relative z-10 transition-transform group-hover:scale-110">
+                            <div className="w-[60px] h-[60px] rounded-full overflow-hidden flex items-center justify-center relative z-10 transition-transform group-hover:scale-110">
                                 <img src={logoIcon} alt="ARVAYON" className="w-full h-full object-cover" />
                             </div>
                         </div>

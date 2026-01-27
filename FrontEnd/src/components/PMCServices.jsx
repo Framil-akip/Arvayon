@@ -124,7 +124,7 @@ const PMCServices = () => {
     ];
 
     return (
-        <section ref={sectionRef} className="section-padding bg-white relative overflow-hidden" id="pmc">
+        <section ref={sectionRef} className="pt-6 pb-16 md:py-16 bg-white relative overflow-hidden" id="pmc">
             {/* Background elements - reduced top gap for section-padding sync */}
             <div className="absolute top-0 left-0 w-full h-12 bg-gradient-to-b from-[#FDFBF7] to-transparent"></div>
 

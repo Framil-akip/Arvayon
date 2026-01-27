@@ -52,7 +52,7 @@ const Portfolio = () => {
     const isPortfolioPage = location.pathname === '/portfolio';
 
     return (
-        <section id="portfolio" className="section-padding bg-white">
+        <section id="portfolio" className="pt-6 pb-16 md:py-16 bg-white">
             <div className="max-w-7xl mx-auto px-4">
                 <div className="text-center mb-16">
                     <div className="flex justify-center mb-8">

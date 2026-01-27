@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const Contact = () => {
     return (
         <>
-            <section id="contact" className="pt-20 pb-12 bg-white relative">
+            <section id="contact" className="pt-6 pb-12 md:pt-20 md:pb-12 bg-white relative">
                 <div className="max-w-7xl mx-auto px-4 md:px-8">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                         {/* Contact Info */}

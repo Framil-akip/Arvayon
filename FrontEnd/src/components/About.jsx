@@ -3,7 +3,7 @@ import { FiLayout, FiUsers, FiPenTool, FiTag, FiClock } from 'react-icons/fi';
 
 const About = () => {
     return (
-        <section id="about" className="py-12 md:py-20 px-4 md:px-12 lg:px-24 bg-white overflow-hidden">
+        <section id="about" className="pt-6 pb-16 md:py-16 px-4 md:px-12 lg:px-24 bg-white overflow-hidden">
             <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8">
                 {/* Image */}
                 <div className="md:col-span-5">
