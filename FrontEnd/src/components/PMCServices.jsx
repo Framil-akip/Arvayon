@@ -156,7 +156,7 @@ const PMCServices = () => {
                 <div className="mb-24">
                     <div className="text-center mb-12">
                         <h3 className="text-2xl font-bold uppercase tracking-widest text-[#D4B878] mb-2">The Reality Check</h3>
-                        <h4 className="text-3xl md:text-5xl font-bold text-gray-900 uppercase">Why Most Construction Projects Fail</h4>
+                        <p className="text-3xl md:text-5xl font-bold text-gray-900 uppercase">Why Most Construction Projects Fail</p>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {failures.map((item, idx) => (
@@ -170,9 +170,9 @@ const PMCServices = () => {
                                     <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-300"></div>
                                 </div>
                                 <div className="p-6 flex-grow flex flex-col">
-                                    <h5 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-[#D4B878] transition-colors duration-300">
+                                    <h4 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-[#D4B878] transition-colors duration-300">
                                         {item.title}
-                                    </h5>
+                                    </h4>
                                     <p className="text-gray-600 text-sm leading-relaxed">
                                         {item.desc}
                                     </p>
@@ -201,7 +201,7 @@ const PMCServices = () => {
                             <div className="absolute top-0 right-0 p-4 opacity-10">
                                 <ShieldCheck className="w-24 h-24" />
                             </div>
-                            <h5 className="text-[#D4B878] font-bold uppercase tracking-wider text-sm mb-6">PMC Control Flow</h5>
+                            <p className="text-[#D4B878] font-bold uppercase tracking-wider text-sm mb-6">PMC Control Flow</p>
                             <div className="flex flex-col md:flex-row items-center justify-between gap-4">
                                 <div className="px-4 py-2 border border-white/20 rounded bg-white/5 font-bold">Client</div>
                                 <ArrowRight className="hidden md:block text-[#D4B878]" />
@@ -209,7 +209,7 @@ const PMCServices = () => {
                                 <ArrowRight className="hidden md:block text-[#D4B878]" />
                                 <div className="px-4 py-2 border border-white/20 rounded bg-white/5 font-bold text-center">Contractors & Vendors</div>
                             </div>
-                            <p className="mt-6 text-sm text-gray-400 text-center md:text-left">All decisions are validated, documented, and monitored.</p>
+                            <p className="mt-6 text-sm text-gray-300 text-center md:text-left">All decisions are validated, documented, and monitored.</p>
                         </div>
                     </div>
 
@@ -217,8 +217,8 @@ const PMCServices = () => {
                         {valueProps.map((item, idx) => (
                             <div key={idx} className="p-6 bg-white border-l-4 border-[#D4B878] shadow-sm hover:shadow-md transition-all">
                                 <div className="text-[#D4B878] mb-4">{item.icon}</div>
-                                <h6 className="font-bold text-gray-900 mb-2">{item.title}</h6>
-                                <p className="text-gray-500 text-sm">{item.desc}</p>
+                                <h4 className="font-bold text-gray-900 mb-2">{item.title}</h4>
+                                <p className="text-gray-600 text-sm">{item.desc}</p>
                             </div>
                         ))}
                     </div>
@@ -234,7 +234,7 @@ const PMCServices = () => {
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
                             {scopes.map((scope, idx) => (
                                 <div key={idx}>
-                                    <h5 className="font-black text-black uppercase tracking-tighter text-xl mb-6">{scope.title}</h5>
+                                    <h4 className="font-black text-black uppercase tracking-tighter text-xl mb-6">{scope.title}</h4>
                                     <ul className="space-y-4">
                                         {scope.items.map((item, i) => (
                                             <li key={i} className="flex items-center gap-3 text-gray-700 font-medium">
