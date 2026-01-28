@@ -70,8 +70,8 @@ const Hero = () => {
             </button>
 
             {/* Content */}
-            <div className="relative z-10 text-center px-6 md:px-8 max-w-5xl mx-auto overflow-x-hidden">
-                <h1 className="text-xl sm:text-2xl md:text-5xl lg:text-7xl font-bold text-white mb-4 leading-tight animate-fade-in-up uppercase whitespace-nowrap">
+            <div className="relative z-10 text-center px-4 md:px-8 max-w-7xl mx-auto overflow-x-hidden">
+                <h1 className="text-base sm:text-xl md:text-4xl lg:text-6xl xl:text-7xl font-bold text-white mb-10 leading-tight animate-fade-in-up uppercase whitespace-nowrap">
                     DESIGN BEYOND IMAGINATION
                 </h1>
                 <p className="text-gray-250 text-base md:text-xl lg:text-2xl mb-8 max-w-5xl mx-auto animate-fade-in-up delay-200">
