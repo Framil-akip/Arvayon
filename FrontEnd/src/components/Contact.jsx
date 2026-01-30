@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const Contact = () => {
     return (
         <>
-            <section id="contact" className="pt-8 pb-12 md:pt-20 md:pb-12 bg-white relative">
+            <section id="contact" className="pt-8 pb-0 md:pt-20 md:pb-12 bg-white relative">
                 <div className="max-w-7xl mx-auto px-4 md:px-8">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                         {/* Contact Info */}
@@ -87,7 +87,7 @@ const Contact = () => {
                         </div>
 
                         {/* Contact Form */}
-                        <div id="book-consultation" className="bg-primary p-8 md:p-10 rounded-2xl border border-white/5 shadow-xl">
+                        <div id="book-consultation" className="bg-primary p-6 md:p-10 -mx-4 w-[calc(100%+2rem)] md:w-auto md:mx-0 rounded-t-3xl rounded-b-none md:rounded-2xl border-t border-x border-white/5 shadow-xl">
                             <h3 className="text-xl font-bold text-white mb-4">Book Free Consultation</h3>
                             <form className="space-y-6">
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
