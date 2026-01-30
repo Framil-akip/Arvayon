@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { FiHome, FiTag, FiImage, FiPhone } from 'react-icons/fi';
+import logoIcon from '../assets/logo-icon.jpg';
 
 const NavItem = ({ icon, label, href, isHome }) => {
   const classes = 'flex flex-col items-center justify-center flex-1 py-2 text-[11px]';
@@ -27,11 +28,8 @@ const NavItem = ({ icon, label, href, isHome }) => {
 const BrandButton = ({ isHome }) => {
   const jsx = (
     <div className="relative">
-      <div className="w-16 h-16 rounded-full border-4 border-primary bg-primary shadow-[0_0_15px_rgba(198,168,104,0.3)]"></div>
-      <div className="absolute inset-0 flex items-center justify-center">
-        <div className="w-14 h-14 rounded-full bg-primary text-accent font-bold shadow-lg border border-accent/30 flex items-center justify-center">
-          <span className="text-[10px] tracking-widest">ABI</span>
-        </div>
+      <div className="w-16 h-16 rounded-full border-4 border-primary bg-primary shadow-[0_0_15px_rgba(198,168,104,0.3)] flex items-center justify-center overflow-hidden">
+        <img src={logoIcon} alt="ARVAYON" className="w-full h-full object-cover" />
       </div>
     </div>
   );

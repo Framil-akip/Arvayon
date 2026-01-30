@@ -55,18 +55,18 @@ const Hero = () => {
                 className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 text-white/50 hover:text-accent transition-colors duration-300 pointer-events-auto"
                 aria-label="Previous Slide"
             >
-                <svg className="w-12 h-12 md:w-16 md:h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                {/* <svg className="w-12 h-12 md:w-16 md:h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
-                </svg>
+                </svg> */}
             </button>
             <button
                 onClick={nextImage}
                 className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 text-white/50 hover:text-accent transition-colors duration-300 pointer-events-auto"
                 aria-label="Next Slide"
             >
-                <svg className="w-12 h-12 md:w-16 md:h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                {/* <svg className="w-12 h-12 md:w-16 md:h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-                </svg>
+                </svg> */}
             </button>
 
             {/* Content */}
@@ -75,10 +75,10 @@ const Hero = () => {
                     DESIGN BEYOND IMAGINATION
                 </h1>
                 <p className="text-gray-250 text-base md:text-xl lg:text-2xl mb-8 max-w-5xl mx-auto animate-fade-in-up delay-200">
-                    From concept planning to disciplined project execution, we deliver transparent, quality-driven building solutions through structured PMC systems.
+                    From concept planning to disciplined project execution, we deliver transparent, <span className="whitespace-nowrap">quality-driven</span> building solutions through structured PMC systems.
                 </p>
                 <div className="text-[#D4B878] text-[10px] sm:text-sm md:text-xl font-bold uppercase tracking-[0.2em] animate-fade-in-up delay-400 md:whitespace-nowrap">
-                    PROJECT MANAGEMENT CONSULTANCY (PMC) <span className="hidden sm:inline">||</span> <br className="sm:hidden" /> Architectural Design <span className="hidden sm:inline">||</span> <br className="sm:hidden" /> Structural Design
+                    PROJECT MANAGEMENT CONSULTANCY<span className="hidden sm:inline">||</span> <br className="sm:hidden" /> Architectural Design <span className="hidden sm:inline">||</span> <br className="sm:hidden" /> Structural Design
                 </div>
             </div>
         </section >

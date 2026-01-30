@@ -57,7 +57,7 @@ const Workprocess = ({ light = false }) => {
                     <div className="flex justify-center mb-6">
                         <div className="inline-block">
                             <h2 className="text-3xl md:text-5xl font-bold uppercase tracking-tight text-[#D4B878] m-0">
-                                Our Working Progress
+                                Our Working Process
                             </h2>
                         </div>
                     </div>

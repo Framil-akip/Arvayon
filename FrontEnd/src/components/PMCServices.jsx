@@ -143,7 +143,7 @@ const PMCServices = () => {
                 </div>
 
                 {/* Fixed Button - Positioned at top for mobile, bottom for desktop */}
-                <div className={`fixed top-24 md:top-auto md:bottom-8 left-1/2 transform -translate-x-1/2 z-[100] transition-all duration-300 ${isButtonVisible ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 translate-y-10 pointer-events-none'} w-max`}>
+                <div className={`fixed bottom-24 md:bottom-8 left-1/2 transform -translate-x-1/2 z-[100] transition-all duration-300 ${isButtonVisible ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 translate-y-10 pointer-events-none'} w-max`}>
                     <a
                         href="/#book-consultation"
                         className="px-6 py-2 md:px-10 md:py-4 bg-gray-900 text-white text-[10px] md:text-sm font-black uppercase tracking-[0.2em] hover:bg-[#D4B878] transition-all duration-300 hover:-translate-y-1 shadow-2xl border border-white/20 rounded-full flex items-center justify-center text-center whitespace-nowrap"
@@ -155,7 +155,7 @@ const PMCServices = () => {
                 {/* Problem Awareness Section - Reverted to Card + Image Style */}
                 <div className="mb-24">
                     <div className="text-center mb-12">
-                        <p className="text-3xl md:text-5xl font-bold text-gray-900 uppercase">The Reaity of Construction Project Risks</p>
+                        <p className="text-3xl md:text-5xl font-bold text-gray-900 uppercase">The Reality of Construction Project Risks</p>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {failures.map((item, idx) => (

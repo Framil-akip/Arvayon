@@ -128,6 +128,16 @@ const Contact = () => {
                                         placeholder="Tell us about your project"
                                     ></textarea>
                                 </div>
+                                <div className="flex items-start gap-3">
+                                    <input
+                                        type="checkbox"
+                                        id="privacy-consent"
+                                        className="mt-1 w-4 h-4 rounded border-gray-300 text-[#D4B878] focus:ring-[#D4B878] bg-secondary border-white/10"
+                                    />
+                                    <label htmlFor="privacy-consent" className="text-sm text-gray-300">
+                                        I agree to the <Link to="/privacy" className="text-[#D4B878] hover:underline">Privacy Policy</Link>
+                                    </label>
+                                </div>
                                 <button type="submit" className="w-full bg-[#D4B878] text-primary px-8 py-3 rounded-lg font-bold hover:scale-105 transform transition-all duration-300 uppercase tracking-widest shadow-lg hover:shadow-xl text-sm">
                                     Send Message
                                 </button>
@@ -145,7 +155,6 @@ const Contact = () => {
                             &copy; {new Date().getFullYear()} Arvayon Pro Build Studio. All rights reserved.
                         </p>
                         <div className="flex space-x-6 text-sm text-black font-medium">
-                            <Link to="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
                             <Link to="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
                         </div>
                     </div>

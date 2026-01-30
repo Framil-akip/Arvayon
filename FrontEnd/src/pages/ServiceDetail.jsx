@@ -86,7 +86,7 @@ const ServiceDetail = () => {
 
                         {/* Detailed Offerings */}
                         <div className="lg:col-span-8">
-                            <h2 className="text-4xl font-black uppercase tracking-tighter mb-12 flex items-center gap-4 text-black">
+                            <h2 className="text-3xl md:text-4xl font-bold font-sans text-gray-900 mb-12 flex items-center gap-4 tracking-tight">
                                 What We Offer
                                 <div className="h-px bg-gray-200 flex-grow"></div>
                             </h2>
@@ -97,7 +97,7 @@ const ServiceDetail = () => {
                                         <div className="w-12 h-12 rounded-xl bg-gray-100 flex items-center justify-center mb-6 group-hover:bg-[#D4B878] group-hover:text-white transition-colors">
                                             <CheckCircle2 className="w-6 h-6" />
                                         </div>
-                                        <h4 className="text-xl font-bold text-gray-900 mb-2">{offering}</h4>
+                                        <h4 className="text-lg md:text-xl font-semibold font-sans text-gray-800 mb-2 leading-snug">{offering}</h4>
                                     </div>
                                 ))}
                             </div>

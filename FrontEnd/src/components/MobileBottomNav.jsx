@@ -35,12 +35,11 @@ const MobileBottomNav = ({ onMenuClick }) => {
                         if (location.pathname !== '/') {
                             navigate('/#pmc');
                         } else {
-                            const element = document.getElementById('pmc');
-                            if (element) element.scrollIntoView({ behavior: 'auto' });
+                            navigate('#pmc');
                         }
                     }}
                     aria-label="Go to Services section"
-                    className={`flex flex-col items-center justify-center h-full transition-colors group w-full ${location.hash === '#pmc' || (location.pathname === '/' && !location.hash) ? 'text-white' : 'text-black hover:text-white'}`}
+                    className={`flex flex-col items-center justify-center h-full transition-colors group w-full ${location.pathname === '/services' || (location.pathname === '/' && location.hash === '#pmc') ? 'text-white' : 'text-black hover:text-white'}`}
                 >
                     <svg className="w-6 h-6 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
@@ -53,13 +52,13 @@ const MobileBottomNav = ({ onMenuClick }) => {
                     <Link
                         to="/"
                         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                        className="absolute -top-10"
+                        className="absolute -top-0"
                     >
-                        <div className="w-20 h-20 rounded-full bg-black flex items-center justify-center border-[7px] border-[#D4B878] shadow-2xl relative">
+                        <div className="w-16 h-16 rounded-full bg-black flex items-center justify-center border-[7px] border-[#D4B880] shadow-[0_3px_10px_rgba(0,0,0,0.5)] relative">
                             {/* The Crisp White Ring - Increased Width Outwards */}
-                            <div className="absolute inset-[-1px] rounded-full border-2 border-white pointer-events-none"></div>
+                            <div className={`absolute inset-[-1px] rounded-full border-2 transition-opacity duration-300 pointer-events-none ${location.pathname === '/' && !location.hash ? 'border-white opacity-100' : 'border-transparent opacity-0'}`}></div>
 
-                            <div className="w-[60px] h-[60px] rounded-full overflow-hidden flex items-center justify-center relative z-10 transition-transform group-hover:scale-110">
+                            <div className="w-[45px] h-[45px] rounded-full overflow-hidden flex items-center justify-center relative z-10 transition-transform group-hover:scale-110">
                                 <img src={logoIcon} alt="ARVAYON" className="w-full h-full object-cover" />
                             </div>
                         </div>
