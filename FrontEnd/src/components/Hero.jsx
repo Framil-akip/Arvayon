@@ -71,12 +71,20 @@ const Hero = () => {
 
             {/* Content */}
             <div className="relative z-10 text-center px-4 md:px-8 max-w-7xl mx-auto overflow-x-hidden">
-                <h1 className="text-base sm:text-xl md:text-4xl lg:text-6xl xl:text-7xl font-bold text-white mb-10 leading-tight animate-fade-in-up uppercase whitespace-nowrap">
-                    DESIGN BEYOND IMAGINATION
+                <h1 className="text-base sm:text-xl md:text-4xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 leading-tight animate-fade-in-up uppercase">
+                    Architectural & Project Management Consultancy in Tamil Nadu
                 </h1>
-                <p className="text-gray-250 text-base md:text-xl lg:text-2xl mb-8 max-w-5xl mx-auto animate-fade-in-up delay-200">
-                    From concept planning to disciplined project execution, we deliver transparent, <span className="whitespace-nowrap">quality-driven</span> building solutions through structured PMC systems.
+                <p className="text-lg md:text-2xl font-semibold text-[#D4B878] mb-8 ms-animate-fade-in-up delay-100 uppercase tracking-wide">
+                                                    - Design. Approval. Clarity. Control.
                 </p>
+                <div className="text-gray-250 text-base md:text-xl lg:text-2xl mb-8 max-w-5xl mx-auto animate-fade-in-up delay-200">
+                    <p className="mb-4">
+                        Arvayon Pro Build Studio is a professional architectural and project management consultancy, delivering planning, design coordination, approvals, and construction guidance through a team of registered architects and qualified engineering professionals.
+                    </p>
+                    <p>
+                        We work on the client’s side to ensure transparency, cost control, and disciplined project execution.
+                    </p>
+                </div>
                 <div className="text-[#D4B878] text-[10px] sm:text-sm md:text-xl font-bold uppercase tracking-[0.2em] animate-fade-in-up delay-400 md:whitespace-nowrap">
                     PROJECT MANAGEMENT CONSULTANCY<span className="hidden sm:inline">||</span> <br className="sm:hidden" /> Architectural Design <span className="hidden sm:inline">||</span> <br className="sm:hidden" /> Structural Design
                 </div>

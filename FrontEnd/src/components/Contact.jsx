@@ -136,7 +136,7 @@ const Contact = () => {
                                         className="mt-1 w-4 h-4 rounded border-gray-300 text-[#D4B878] focus:ring-[#D4B878] bg-secondary border-white/10"
                                     />
                                     <label htmlFor="privacy-consent" className="text-sm text-gray-300">
-                                        I agree to the <Link to="/privacy" className="text-[#D4B878] hover:underline">Privacy Policy</Link>
+                                        I agree to the <Link to="/privacy" className="text-[#D4B878] hover:underline">Privacy Policy</Link> and <Link to="/terms" className="text-[#D4B878] hover:underline">Terms of Service</Link>
                                     </label>
                                 </div>
                                 <button type="submit" className="w-full bg-[#D4B878] text-primary px-8 py-3 rounded-lg font-bold hover:scale-105 transform transition-all duration-300 uppercase tracking-widest shadow-lg hover:shadow-xl text-sm">
